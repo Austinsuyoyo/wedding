@@ -908,7 +908,11 @@ $(document).ready(function() {
 			// 判斷是否可以觸發 confetti
 			if (canTriggerConfetti) {
 				// 觸發 confetti
-				confetti({ particleCount: 200, startVelocity: 30, spread: 360, origin: { x: Math.random() * 0.7 + 0.15, y: Math.random() * 0.5 } });
+				if (device.tablet() || device.mobile()) {
+					confetti({ angle: Math.random() * 70 + 55, particleCount: Math.random() * 50 + 50, startVelocity: 30, spread: Math.random() * 20 + 50, origin: { y: 0.5 } });
+				} else {
+					confetti({ particleCount: 200, startVelocity: 25, spread: 360, origin: { x: Math.random() * 0.7 + 0.15, y: Math.random() * 0.5 } });
+				}
 
 				// 設定一秒後再次可以觸發 confetti
 				canTriggerConfetti = false;

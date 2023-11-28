@@ -2866,10 +2866,11 @@ footer .image-divider.fixed-height {
 }
 
 .his-her-name .last-name {
-    font-family: 'Pacifico', cursive;
-    font-size: 24px;
+    font-family: '隨峰體', cursive;
+    font-size: 40px;
     display: block;
     margin-top: 0;
+    src: url(ThePeakFontBeta_V0_101.ttf);
 }
 
 .his-her-name .heart-wrapper {

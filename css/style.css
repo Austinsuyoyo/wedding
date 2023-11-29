@@ -76,7 +76,7 @@
 		06.9.1 Zoom
 		06.9.2 Left-Right
 	06.10 Video Audio Control
-
+    06.11 Slide Arrow
 07. PAGE
 	07.1 Page Layout
 		07.1.1 Page Without Slider
@@ -1335,6 +1335,107 @@ img.with-border {
 
 #main-slider .video-audio-control.mobile {
     display: none;
+}
+
+/* 06.11 Alide Arrow							 */
+/* ----------------------------------------------*/
+#slide-arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    margin: auto;
+    z-index: 2000;
+    text-align: center;
+    width: 100px;
+}
+
+#slide-arrow a {
+    color: #FFF;
+    font-size: 16px;
+}
+
+@-webkit-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-15px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-7px);
+    }
+}
+
+@-moz-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-15px);
+    }
+
+    60% {
+        -moz-transform: translateY(-7px);
+    }
+}
+
+@-o-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -o-transform: translateY(0);
+    }
+
+    40% {
+        -o-transform: translateY(-15px);
+    }
+
+    60% {
+        -o-transform: translateY(-7px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-15px);
+    }
+
+    60% {
+        transform: translateY(-7px);
+    }
+}
+
+.bounceloop {
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
 }
 
 /*===============================================*/
@@ -4049,7 +4150,7 @@ p{
 }
 
 .hashtag {
-  color: #2e89ff
+    color: #2e89ff
 }
 
 @media screen and (max-width: 991px) {

@@ -213,7 +213,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'HYXinHaiXingKai', cursive;
 }
 
 h1,
@@ -2967,11 +2967,10 @@ footer .image-divider.fixed-height {
 }
 
 .his-her-name .last-name {
-    font-family: '隨峰體', cursive;
+    font-family: 'HYXinHaiXingKai', cursive;
     font-size: 40px;
     display: block;
     margin-top: 0;
-    src: url(ThePeakFontBeta_V0_101.ttf);
 }
 
 .his-her-name .heart-wrapper {
@@ -3840,10 +3839,10 @@ a:hover .navbar-setting-button,
         /*===============================================*/
         /* 01. GENERAL			 						 */
         /*===============================================
-p{
-	font-size:14px;
-	line-height:24px;
-}*/
+        p{
+            font-size:14px;
+            line-height:24px;
+        }*/
         /* 06.5.6 Save The Date Title */
         /* ----------------------------------------------*/
         #save-the-date {

@@ -77,7 +77,7 @@
 
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 	// 01. BROWSER AGENT FUNCTION
 	//==================================================================================
@@ -86,7 +86,7 @@ $(document).ready(function() {
 	//----------------------------------------------------------------------------------
 	var isChromeMobile = function isChromeMobile() {
 		if (device.tablet() || device.mobile()) {
-			if (window.navigator.userAgent.indexOf("Chrome") > 0 || window.navigator.userAgent.indexOf("CriOS") > 0){
+			if (window.navigator.userAgent.indexOf("Chrome") > 0 || window.navigator.userAgent.indexOf("CriOS") > 0) {
 				return 1;
 			}
 		}
@@ -95,7 +95,7 @@ $(document).ready(function() {
 	// 01.2 Check IOS
 	//----------------------------------------------------------------------------------
 	var isIOS = function isIOS() {
-		if (window.navigator.userAgent.indexOf("iPhone") > 0 || window.navigator.userAgent.indexOf("iPad") > 0 || window.navigator.userAgent.indexOf("iPod") > 0){
+		if (window.navigator.userAgent.indexOf("iPhone") > 0 || window.navigator.userAgent.indexOf("iPad") > 0 || window.navigator.userAgent.indexOf("iPod") > 0) {
 			return 1;
 		}
 	}
@@ -103,7 +103,7 @@ $(document).ready(function() {
 	// 01.3 Check FIREFOX
 	//----------------------------------------------------------------------------------
 	var is_firefox = function is_firefox() {
-		if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+		if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
 			return 1;
 		}
 	}
@@ -111,71 +111,71 @@ $(document).ready(function() {
 	// 01.4 Check IE (< IE10)
 	//----------------------------------------------------------------------------------
 	var isIE = function isIE() {
- 		if (window.navigator.userAgent.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident\/7\./)) {
-   		 	return 1;
+		if (window.navigator.userAgent.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident\/7\./)) {
+			return 1;
 		}
 	}
 
 	// 01.5 Check IE11
 	//----------------------------------------------------------------------------------
 	var isIE11 = function isIE11() {
- 		if (!!navigator.userAgent.match(/Trident\/7\./)) {
-   		 	return 1;
+		if (!!navigator.userAgent.match(/Trident\/7\./)) {
+			return 1;
 		}
 	}
 
 	// 01.6 Check IE11 (Not Windows Phone)
 	///----------------------------------------------------------------------------------
 	var isIE11desktop = function isIE11desktop() {
- 		if (!!navigator.userAgent.match(/Trident\/7\./) && window.navigator.userAgent.indexOf("Windows Phone") < 0) {
-   		 	return 1;
+		if (!!navigator.userAgent.match(/Trident\/7\./) && window.navigator.userAgent.indexOf("Windows Phone") < 0) {
+			return 1;
 		}
 	}
 
 	// 01.7 Check IE10
 	//----------------------------------------------------------------------------------
 	var isIE10 = function isIE10() {
- 		if (window.navigator.userAgent.indexOf("MSIE 10.0") > 0) {
-   		 	return 1;
+		if (window.navigator.userAgent.indexOf("MSIE 10.0") > 0) {
+			return 1;
 		}
 	}
 
 	// 01.8 Check IE9
 	//----------------------------------------------------------------------------------
 	var isIE9 = function isIE9() {
- 		if (window.navigator.userAgent.indexOf("MSIE 9.0") > 0) {
-   		 	return 1;
+		if (window.navigator.userAgent.indexOf("MSIE 9.0") > 0) {
+			return 1;
 		}
 	}
 
 	// 01.9 Check Safari/Chrome Mac
 	//----------------------------------------------------------------------------------
 	var isSafari = function isSafari() {
-	 	if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Mac') != -1) {
-   		 	return 1;
+		if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Mac') != -1) {
+			return 1;
 		}
 	}
 
 
 	// 02. FULLSCREEN CLASS
 	//==================================================================================
-	var fullscreen = function(){
+	var fullscreen = function () {
 		var fheight = $(window).height();
-		$('.fullscreen').css("height",fheight);
+		$('.fullscreen').css("height", fheight);
 	}
 
 	//Execute on load
 	fullscreen();
 
 	//Execute on window resize
-	$(window).resize(function() {
+	$(window).resize(function () {
 		fullscreen();
 	});
 
 	// 03. HIDDEN ALL ANIMATION CLASS
 	//==================================================================================
 	// Waypoint will animate it later (04.5 Waypoint Animate CSS)
-	if( !device.tablet() && !device.mobile() && !isIE9() ) {
+	if (!device.tablet() && !device.mobile() && !isIE9()) {
 		$('.animation').css({
 			visibility: 'hidden'
 		});
@@ -201,8 +201,7 @@ $(document).ready(function() {
 				transitionDuration: 0,
 			});
 		}
-		else
-		{
+		else {
 			$gallery.masonry({
 				columnWidth: ".grid-sizer",
 				itemSelector: ".masonry-col",
@@ -216,57 +215,55 @@ $(document).ready(function() {
 		//------------------------------------------------------------------------------
 		if (device.tablet() || device.mobile()) {
 			if ($("#nav-bar").hasClass("sticky-nav")) {
-				$("#nav-header").css("position","relative");
+				$("#nav-header").css("position", "relative");
 			}
 		}
 
 		// 04.3 Waypoint Sticky Navbar
 		//------------------------------------------------------------------------------
-		if ($("#nav-bar").hasClass("sticky-nav")){
+		if ($("#nav-bar").hasClass("sticky-nav")) {
 
 			// 04.3.1 Top Bar
-			if ($("#nav-bar").hasClass("top-bar")){
+			if ($("#nav-bar").hasClass("top-bar")) {
 
-	 			var nav_header_waypoint = $('#nav-header').waypoint(function(direction) {
+				var nav_header_waypoint = $('#nav-header').waypoint(function (direction) {
 
 					if (direction === 'down') {
-						if( !device.tablet() && !device.mobile() ) {
-							$("#nav-bar").addClass("stick-it animated fadeInDownBig");
+						if (!device.tablet() && !device.mobile()) {
+							$("#nav-bar").addClass("stick-it animate__animated animate__fadeInDownBig");
 						}
-						else
-						{
+						else {
 							$("#nav-bar").addClass("stick-it");
 						}
 					}
 					else {
-						$("#nav-bar").removeClass("stick-it animated fadeInDownBig");
+						$("#nav-bar").removeClass("stick-it animate__animated animate__fadeInDownBig");
 					}
 
 				}, {
-  					offset:'-100%'
+					offset: '-100%'
 				});
 			}
 
 			// 04.3.2 Bottom Bar
-			else if  ($("#nav-bar").hasClass("bottom-bar")){
+			else if ($("#nav-bar").hasClass("bottom-bar")) {
 
-				var waypoints = $('#nav-header').waypoint(function(direction) {
+				var waypoints = $('#nav-header').waypoint(function (direction) {
 
 					if (direction === 'down') {
-						if( !device.tablet() && !device.mobile() ) {
-							$("#nav-bar").addClass("stick-it animated fadeInDownBig");
+						if (!device.tablet() && !device.mobile()) {
+							$("#nav-bar").addClass("stick-it animate__animated animate__fadeInDownBig");
 						}
-						else
-						{
+						else {
 							$("#nav-bar").addClass("stick-it");
 						}
 					}
 					else if (direction === 'up') {
-						$("#nav-bar").removeClass("stick-it animated fadeInDownBig");
+						$("#nav-bar").removeClass("stick-it animate__animated animate__fadeInDownBig");
 					}
 
 				}, {
-  					offset:'-145px'
+					offset: '-145px'
 				});
 			}
 
@@ -275,7 +272,7 @@ $(document).ready(function() {
 		// 04.4 Waypoint Sticky Menu Icon (Sidebar Version)
 		//------------------------------------------------------------------------------
 
-		var sticky_menuicon_waypoint = $('#menu-icon').waypoint(function(direction) {
+		var sticky_menuicon_waypoint = $('#menu-icon').waypoint(function (direction) {
 			if (direction === 'down') {
 				$('#sticky-menuicon').show();
 			}
@@ -284,44 +281,48 @@ $(document).ready(function() {
 			}
 
 		}, {
-  			offset:'-100%'
+			offset: '-100%'
 		})
 
 
 		// 04.5 Waypoint Animate CSS
 		//------------------------------------------------------------------------------
-		if( !device.tablet() && !device.mobile() && !isIE9() ) {
-			$('.animation').each(function(){
-        		var _this = this;
-        		var animation_waypoint = new Waypoint({
-            		element: _this,
-            		handler: function (direction) {
-						$(this.element).css({ visibility: 'visible' });
-						$(this.element).addClass('animated');
-            			},
-            			offset: '90%'
-        			});
-        	});
+		if (!device.tablet() && !device.mobile() && !isIE9()) {
+			$(document).ready(function () {
+				// Set up Waypoint to trigger at 90% offset for each .animation element
+				$('.animation').waypoint({
+					handler: function (direction) {
+						if (direction === 'down' && !$(this.element).hasClass('animate__animated')) {
+							const animations = ['bounce', 'fadeIn', 'fadeInLeft', 'fadeInRight', 'fadeInUp'];
 
+							animations.forEach(animation => {
+								if ($(this.element).hasClass(animation)) {
+									$(this.element).removeClass(`${animation}`).addClass(`animate__animated animate__${animation}`).css({ visibility: 'visible' });
+								}
+							});
+						}
+					},
+					offset: '90%'
+				});
+			});
 		}
 
 		// 04.6 Stellar Parallax
 		//------------------------------------------------------------------------------
-	 	if( !device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari() ) {
-			$(".image-divider").css("background-attachment","fixed");
-		 	$(window).stellar({
-			 	horizontalScrolling: false,
+		if (!device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari()) {
+			$(".image-divider").css("background-attachment", "fixed");
+			$(window).stellar({
+				horizontalScrolling: false,
 				responsive: true,
-		 	});
-	 	}
-
+			});
+		}
 	}); // END of Pace on Hide
 
 
 	// 05. PRELOADER HEART ANIMATION (IE10 / 11)
 	//==================================================================================
-	if (isIE10() || isIE11()){
-		$(".heart-animation").css("letter-spacing","normal");
+	if (isIE10() || isIE11()) {
+		$(".heart-animation").css("letter-spacing", "normal");
 	}
 
 	// 05. IMAGE DIVIDER (Mobile / Tablet)
@@ -332,36 +333,36 @@ $(document).ready(function() {
 
 	// 06. BIND TOUCH FOR PHOTO ITEM (Mobile / Tablet)
 	//==================================================================================
-	$('.photo-item').bind('touchstart touchend', function(e) {
+	$('.photo-item').bind('touchstart touchend', function (e) {
 	});
 
 	// 07. COUNTDOWN
 	//===================================================================================
 	var theday = new Date();
 	theday = new Date(2023, 5 - 1 /* May */, 28);
-	$('#countdown').countdown({until: theday, format: 'WDHMS'});
+	$('#countdown').countdown({ until: theday, format: 'WDHMS' });
 	$('#countdown').countdown($.countdown.regionalOptions['custom-label']);
 
-	$('#date-countdown').countdown({until: theday, format: 'WDHMS'});
+	$('#date-countdown').countdown({ until: theday, format: 'WDHMS' });
 
 	// 08. MOBILE MENU
 	//==================================================================================
-	$("#mobile-nav").click(function(e){
+	$("#mobile-nav").click(function (e) {
 		e.preventDefault()
 		$("#nav-menu").toggleClass("open");
 	});
 
 	// Hide Menu After Click It. Will be used on onepage version.
-	$("#nav-menu li a").click(function(){
-		 if ($(this).attr("href") !== "#") {
-			 $("#nav-menu").removeClass("open");
-		 }
+	$("#nav-menu li a").click(function () {
+		if ($(this).attr("href") !== "#") {
+			$("#nav-menu").removeClass("open");
+		}
 	});
 
 	// 09. DOUBLE TAP DROP DOWN MENU
 	//==================================================================================
-	if ($(window).width() > 991){
-		$( '#nav-menu' ).doubleTapToGo();
+	if ($(window).width() > 991) {
+		$('#nav-menu').doubleTapToGo();
 	}
 
 	// 10. OWL CAROUSEL
@@ -369,9 +370,9 @@ $(document).ready(function() {
 
 	// 10.1 OWL CAROUSEL - GIFT REGISTRY
 	//------------------------------------------------------------------------------
-	if ($("#gift-registry").length){
-    	$("#gift-registry").owlCarousel({
-			items : 3,
+	if ($("#gift-registry").length) {
+		$("#gift-registry").owlCarousel({
+			items: 3,
 			autoPlay: 2000,
 			stopOnHover: true,
 			pagination: true,
@@ -385,14 +386,14 @@ $(document).ready(function() {
 
 	// 10.2 OWL CAROUSEL - MORE EVENTS (ONEPAGE)
 	//------------------------------------------------------------------------------
-	if ($("#events-carousel").length){
-    	$("#events-carousel").owlCarousel({
-			items : 2,
-			itemsDesktopSmall: [979,2],
+	if ($("#events-carousel").length) {
+		$("#events-carousel").owlCarousel({
+			items: 2,
+			itemsDesktopSmall: [979, 2],
 			autoPlay: 2000,
 			stopOnHover: true,
 			pagination: true,
-			navigation:false,
+			navigation: false,
 		});
 
 		if (device.tablet() || device.mobile()) {
@@ -403,32 +404,32 @@ $(document).ready(function() {
 
 	// 10.3 OWL CAROUSEL - REGISTRY LOGO (ONEPAGE)
 	//------------------------------------------------------------------------------
-	if ($("#friends-wishes").length){
-    $("#friends-wishes").ajax_wishes();
+	if ($("#friends-wishes").length) {
+		$("#friends-wishes").ajax_wishes();
 	}
 
 	// 11. RSVP
 	//==================================================================================
-	if ($("#rsvpform").length){
+	if ($("#rsvpform").length) {
 		$("#rsvpform").ajaxrsvp();
 	}
 
 	// 11.1 Custom Checkbox
 	//----------------------------------------------------------------------------------
-	$(".ajax-checkbox .custom-option-icon").click(function(){
-		$(this).toggleClass( "active-icon" );
+	$(".ajax-checkbox .custom-option-icon").click(function () {
+		$(this).toggleClass("active-icon");
 	});
 
 	// 11.2 Custom Radio
 	//----------------------------------------------------------------------------------
-	$(".ajax-radio .custom-option-icon").click(function(){
-		if (!($(this).parent().hasClass("radio"))){
-			$(this).siblings().removeClass( "active-icon" );
-			$(this).addClass( "active-icon" );
+	$(".ajax-radio .custom-option-icon").click(function () {
+		if (!($(this).parent().hasClass("radio"))) {
+			$(this).siblings().removeClass("active-icon");
+			$(this).addClass("active-icon");
 		}
-		else{
-			$(this).parent().siblings().children(".custom-option-icon").removeClass( "active-icon" );
-			$(this).addClass( "active-icon" );
+		else {
+			$(this).parent().siblings().children(".custom-option-icon").removeClass("active-icon");
+			$(this).addClass("active-icon");
 		}
 	});
 
@@ -449,77 +450,77 @@ $(document).ready(function() {
 	// 13.1 Magnific Zoom
 	//----------------------------------------------------------------------------------
 	$('.magnific-zoom').magnificPopup({
- 		type: 'image',
+		type: 'image',
 		image: {
-    		// options for image content type
-    		titleSrc: 'title'
- 		},
+			// options for image content type
+			titleSrc: 'title'
+		},
 		//fixedContentPos:true,
 		callbacks: {
-    		open: function() {
-      			// Will fire when this exact popup is opened
-    		},
-    		afterClose: function() {
-      			// Will fire when popup is closed
-    		}
-  		},
+			open: function () {
+				// Will fire when this exact popup is opened
+			},
+			afterClose: function () {
+				// Will fire when popup is closed
+			}
+		},
 	});
 
 	// 13.2 Magnific Zoom Gallery
 	//----------------------------------------------------------------------------------
 	$('.magnific-zoom-gallery').magnificPopup({
- 		type: 'image',
+		type: 'image',
 		image: {
-    		// options for image content type
-    		titleSrc: 'title'
- 		},
+			// options for image content type
+			titleSrc: 'title'
+		},
 		gallery: {
-         	 enabled:true
-        },
+			enabled: true
+		},
 		//fixedContentPos:true,
 		callbacks: {
-    		open: function() {
-      			// Will fire when this exact popup is opened
-    		},
-    		afterClose: function() {
-      			// Will fire when popup is closed
-    		}
-  		},
+			open: function () {
+				// Will fire when this exact popup is opened
+			},
+			afterClose: function () {
+				// Will fire when popup is closed
+			}
+		},
 	});
 
 	// MAGNIFIC AJAX
 	//==================================================================================
 	$('.magnific-ajax').magnificPopup({
-  		type: 'ajax',
+		type: 'ajax',
 		ajax: {
-			settings: {cache:false}
+			settings: { cache: false }
 			// Ajax settings object that will extend default one - http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings
 			// For example:
 			// settings: {cache:false, async:false}
 		},
 		callbacks: {
-    		open: function() {
-      			// Will fire when this exact popup is opened
-    		},
-    		afterClose: function() {
-      			// Will fire when popup is closed
+			open: function () {
+				// Will fire when this exact popup is opened
+			},
+			afterClose: function () {
+				// Will fire when popup is closed
 
-    		}
-  		},
+			}
+		},
 	});
 
 	// 14. DISALBE TRANSITION (Mobile / Tablet)
 	//==================================================================================
-	if( device.tablet() || device.mobile() ) {
-		if (!isIE11desktop()){
+	if (device.tablet() || device.mobile()) {
+		if (!isIE11desktop()) {
 			// de-icon
-			$(".de-icon, .de-icon i").css("transition","none");
+			$(".de-icon, .de-icon i").css("transition", "none");
 
 			// Photo-item
-			$(".photo-item img.hover-animation").css("transition","none");
-			$(".photo-item .layer.hover-animation").css("transition","none");
-		 }
-	 }
+			$(".photo-item img.hover-animation").css("transition", "none");
+			$(".photo-item .layer.hover-animation").css("transition", "none");
+		}
+	}
 
 
 	// 15. AUDIO
@@ -529,10 +530,10 @@ $(document).ready(function() {
 	//----------------------------------------------------------------------------------
 	//	Chrome and Safari IOS not cannot autoplay audio.
 	//	Default audio will reset to mute
-	 if (isChromeMobile() || isIOS()){
+	if (isChromeMobile() || isIOS()) {
 		var audioElm = document.getElementById('audioID');
 
-		if (audioElm != null){
+		if (audioElm != null) {
 			audioElm.muted = true;
 
 			var mute_icon = $("#mute-audio").data("mute-icon");
@@ -544,12 +545,12 @@ $(document).ready(function() {
 			$("#mute-audio i").removeClass();
 			$("#mute-audio i").addClass(mute_icon);
 		}
-	 }
+	}
 
 
 	// 15.2 On toggle mute button
 	//----------------------------------------------------------------------------------
-	 $("#mute-audio").click(function(e){
+	$("#mute-audio").click(function (e) {
 		e.preventDefault();
 		var audioElm = document.getElementById('audioID');
 
@@ -557,44 +558,40 @@ $(document).ready(function() {
 		var mute_icon = $(this).data("mute-icon");
 		var unmute_icon = $(this).data("unmute-icon");
 
-		if (on_start == "unmute"){
-			if ($("#mute-audio i").hasClass( unmute_icon )){
-				$("#mute-audio i").removeClass( unmute_icon );
-				$("#mute-audio i").addClass( mute_icon );
-				if (isIOS()){
+		if (on_start == "unmute") {
+			if ($("#mute-audio i").hasClass(unmute_icon)) {
+				$("#mute-audio i").removeClass(unmute_icon);
+				$("#mute-audio i").addClass(mute_icon);
+				if (isIOS()) {
 					//Because of IOS cannot mute by script, then change it to pause.
 					audioElm.pause();
 				}
-				else
-				{
+				else {
 					audioElm.muted = true;
 				}
 			}
-			else
-			{
-				$("#mute-audio i").removeClass( mute_icon );
-				$("#mute-audio i").addClass( unmute_icon );
+			else {
+				$("#mute-audio i").removeClass(mute_icon);
+				$("#mute-audio i").addClass(unmute_icon);
 				audioElm.play();
 				audioElm.muted = false;
 			}
 		}
-		else if (on_start == "mute"){
-			if ($("#mute-audio i").hasClass( mute_icon )){
-				$("#mute-audio i").removeClass( mute_icon );
-				$("#mute-audio i").addClass( unmute_icon );
+		else if (on_start == "mute") {
+			if ($("#mute-audio i").hasClass(mute_icon)) {
+				$("#mute-audio i").removeClass(mute_icon);
+				$("#mute-audio i").addClass(unmute_icon);
 				audioElm.play();
 				audioElm.muted = false;
 			}
-			else
-			{
-				$("#mute-audio i").removeClass( unmute_icon );
-				$("#mute-audio i").addClass( mute_icon );
-				if (isIOS()){
+			else {
+				$("#mute-audio i").removeClass(unmute_icon);
+				$("#mute-audio i").addClass(mute_icon);
+				if (isIOS()) {
 					//Because of IOS cannot mute by script, then change it to pause.
 					audioElm.pause();
 				}
-				else
-				{
+				else {
 					audioElm.muted = true;
 				}
 			}
@@ -613,40 +610,38 @@ $(document).ready(function() {
 
 	// 16.2 Play Pause Video
 	//----------------------------------------------------------------------------------
-	if( device.tablet() || device.mobile() ) {
+	if (device.tablet() || device.mobile()) {
 		$(".slide-video-control").hide();
 	}
 
-	$("#play-pause").click(function(e){
+	$("#play-pause").click(function (e) {
 		e.preventDefault();
 		var video = $(".slide-video").data("vide").getVideoObject();
 		var on_start = $(this).data("start");
 		var pause_icon = $(this).data("pause-icon");
 		var play_icon = $(this).data("play-icon");
 
-		if (on_start == "play"){
-			if ($("#play-pause i").hasClass( pause_icon )){
-				$("#play-pause i").removeClass( pause_icon );
-				$("#play-pause i").addClass( play_icon );
+		if (on_start == "play") {
+			if ($("#play-pause i").hasClass(pause_icon)) {
+				$("#play-pause i").removeClass(pause_icon);
+				$("#play-pause i").addClass(play_icon);
 				video.pause();
 			}
-			else
-			{
-				$("#play-pause i").removeClass( play_icon );
-				$("#play-pause i").addClass( pause_icon );
+			else {
+				$("#play-pause i").removeClass(play_icon);
+				$("#play-pause i").addClass(pause_icon);
 				video.play();
 			}
 		}
-		else if ($(this).data("start") == "pause"){
-			if ($("#play-pause i").hasClass( play_icon )){
-				$("#play-pause i").removeClass( play_icon );
-				$("#play-pause i").addClass( pause_icon );
+		else if ($(this).data("start") == "pause") {
+			if ($("#play-pause i").hasClass(play_icon)) {
+				$("#play-pause i").removeClass(play_icon);
+				$("#play-pause i").addClass(pause_icon);
 				video.play();
 			}
-			else
-			{
-				$("#play-pause i").removeClass( pause_icon );
-				$("#play-pause i").addClass( play_icon );
+			else {
+				$("#play-pause i").removeClass(pause_icon);
+				$("#play-pause i").addClass(play_icon);
 				video.pause();
 			}
 		}
@@ -654,35 +649,33 @@ $(document).ready(function() {
 
 	});
 
-	$("#mute").click(function(e){
+	$("#mute").click(function (e) {
 		e.preventDefault();
 		var on_start = $(this).data("start");
 		var mute_icon = $(this).data("mute-icon");
 		var unmute_icon = $(this).data("unmute-icon");
 
-		if (on_start == "unmute"){
-			if ($("#mute i").hasClass( unmute_icon )){
-				$("#mute i").removeClass( unmute_icon );
-				$("#mute i").addClass( mute_icon );
+		if (on_start == "unmute") {
+			if ($("#mute i").hasClass(unmute_icon)) {
+				$("#mute i").removeClass(unmute_icon);
+				$("#mute i").addClass(mute_icon);
 				$(".slide-video video").prop('muted', true);
 			}
-			else
-			{
-				$("#mute i").removeClass( mute_icon );
-				$("#mute i").addClass( unmute_icon );
+			else {
+				$("#mute i").removeClass(mute_icon);
+				$("#mute i").addClass(unmute_icon);
 				$(".slide-video video").prop('muted', false);
 			}
 		}
-		else if (on_start == "mute"){
-			if ($("#mute i").hasClass( mute_icon )){
-				$("#mute i").removeClass( mute_icon );
-				$("#mute i").addClass( unmute_icon );
+		else if (on_start == "mute") {
+			if ($("#mute i").hasClass(mute_icon)) {
+				$("#mute i").removeClass(mute_icon);
+				$("#mute i").addClass(unmute_icon);
 				$(".slide-video video").prop('muted', false);
 			}
-			else
-			{
-				$("#mute i").removeClass( unmute_icon );
-				$("#mute i").addClass( mute_icon );
+			else {
+				$("#mute i").removeClass(unmute_icon);
+				$("#mute i").addClass(mute_icon);
 				$(".slide-video video").prop('muted', true);
 			}
 		}
@@ -695,15 +688,14 @@ $(document).ready(function() {
 
 	// 17.1 Setting Button
 	//----------------------------------------------------------------------------------
-	$("#setting-button").click(function(e){
+	$("#setting-button").click(function (e) {
 		e.preventDefault();
-		if ($("#setting-button i").hasClass("de-icon-cog")){
+		if ($("#setting-button i").hasClass("de-icon-cog")) {
 			$("#options-setting").addClass("move-right");
 			$("#setting-button i").removeClass("de-icon-cog");
 			$("#setting-button i").addClass("de-icon-cancel-3");
 		}
-		else
-		{
+		else {
 			$("#options-setting").removeClass("move-right");
 			$("#setting-button i").removeClass("de-icon-cancel-3");
 			$("#setting-button i").addClass("de-icon-cog");
@@ -716,11 +708,11 @@ $(document).ready(function() {
 	var current_navbar = "white";
 
 	//Coral
-	$("#coral").click(function(e){
+	$("#coral").click(function (e) {
 		e.preventDefault();
 		$('link[rel*=skin]').remove();
 		$('head').append('<link rel="stylesheet skin" href="css/skin/coral/coral.css" type="text/css" />');
-		if (current_navbar == "color"){
+		if (current_navbar == "color") {
 			$('link[rel*=navbar]').remove();
 			$('head').append('<link rel="stylesheet navbar" href="css/skin/coral/coral-reverse-navbar.css" type="text/css" />');
 		}
@@ -728,11 +720,11 @@ $(document).ready(function() {
 	});
 
 	//Coral-Red
-	$("#coral-red").click(function(e){
+	$("#coral-red").click(function (e) {
 		e.preventDefault();
 		$('link[rel*=skin]').remove();
 		$('head').append('<link rel="stylesheet skin" href="css/skin/coral-red/coral-red.css" type="text/css" />');
-		if (current_navbar == "color"){
+		if (current_navbar == "color") {
 			$('link[rel*=navbar]').remove();
 			$('head').append('<link rel="stylesheet navbar" href="css/skin/coral-red/coral-red-reverse-navbar.css" type="text/css" />');
 		}
@@ -740,11 +732,11 @@ $(document).ready(function() {
 	});
 
 	//Lapis
-	$("#lapis").click(function(e){
+	$("#lapis").click(function (e) {
 		e.preventDefault();
 		$('link[rel*=skin]').remove();
 		$('head').append('<link rel="stylesheet skin" href="css/skin/lapis/lapis.css" type="text/css" />');
-		if (current_navbar == "color"){
+		if (current_navbar == "color") {
 			$('link[rel*=navbar]').remove();
 			$('head').append('<link rel="stylesheet navbar" href="css/skin/lapis/lapis-reverse-navbar.css" type="text/css" />');
 		}
@@ -752,11 +744,11 @@ $(document).ready(function() {
 	});
 
 	//Light Teal
-	$("#light-teal").click(function(e){
+	$("#light-teal").click(function (e) {
 		e.preventDefault();
 		$('link[rel*=skin]').remove();
 		$('head').append('<link rel="stylesheet skin" href="css/skin/light-teal/light-teal.css" type="text/css" />');
-		if (current_navbar == "color"){
+		if (current_navbar == "color") {
 			$('link[rel*=navbar]').remove();
 			$('head').append('<link rel="stylesheet navbar" href="css/skin/light-teal/light-teal-reverse-navbar.css" type="text/css" />');
 		}
@@ -764,11 +756,11 @@ $(document).ready(function() {
 	});
 
 	//Tan
-	$("#tan").click(function(e){
+	$("#tan").click(function (e) {
 		e.preventDefault();
 		$('link[rel*=skin]').remove();
 		$('head').append('<link rel="stylesheet skin" href="css/skin/tan/tan.css" type="text/css" />');
-		if (current_navbar == "color"){
+		if (current_navbar == "color") {
 			$('link[rel*=navbar]').remove();
 			$('head').append('<link rel="stylesheet navbar" href="css/skin/tan/tan-reverse-navbar.css" type="text/css" />');
 		}
@@ -776,10 +768,10 @@ $(document).ready(function() {
 	});
 
 	//Reset Color
-	$("#reset-color").click(function(e){
+	$("#reset-color").click(function (e) {
 		e.preventDefault();
 		$('link[rel*=skin]').remove();
-		if (current_navbar == "color"){
+		if (current_navbar == "color") {
 			$('link[rel*=navbar]').remove();
 			$('head').append('<link rel="stylesheet navbar" href="css/skin/default/default-reverse-navbar.css" type="text/css" />');
 		}
@@ -787,7 +779,7 @@ $(document).ready(function() {
 	});
 
 	//White Navbar Background
-	$("#white-navbar").click(function(e){
+	$("#white-navbar").click(function (e) {
 		e.preventDefault();
 		$("#white-navbar span").addClass("active");
 		$("#color-navbar span").removeClass("active");
@@ -797,7 +789,7 @@ $(document).ready(function() {
 	});
 
 	//Color Navbar Background
-	$("#color-navbar").click(function(e){
+	$("#color-navbar").click(function (e) {
 		e.preventDefault();
 		$("#color-navbar span").addClass("active");
 		$("#white-navbar span").removeClass("active");
@@ -810,7 +802,7 @@ $(document).ready(function() {
 
 	// Pattern
 	//----------------------------------------------------------------------------------
-	$("#pattern-1").click(function(e){
+	$("#pattern-1").click(function (e) {
 		e.preventDefault();
 		$("#pattern-1 span").addClass("active");
 		$("#pattern-2 span").removeClass("active");
@@ -821,7 +813,7 @@ $(document).ready(function() {
 		$('head').append('<link rel="stylesheet pattern" href="css/skin/pattern/pattern-1.css" type="text/css" />');
 	});
 
-	$("#pattern-2").click(function(e){
+	$("#pattern-2").click(function (e) {
 		e.preventDefault();
 		$("#pattern-1 span").removeClass("active");
 		$("#pattern-2 span").addClass("active");
@@ -832,7 +824,7 @@ $(document).ready(function() {
 		$('head').append('<link rel="stylesheet pattern" href="css/skin/pattern/pattern-2.css" type="text/css" />');
 	});
 
-	$("#pattern-3").click(function(e){
+	$("#pattern-3").click(function (e) {
 		e.preventDefault();
 		$("#pattern-1 span").removeClass("active");
 		$("#pattern-2 span").removeClass("active");
@@ -843,7 +835,7 @@ $(document).ready(function() {
 		$('head').append('<link rel="stylesheet pattern" href="css/skin/pattern/pattern-3.css" type="text/css" />');
 	});
 
-	$("#pattern-none").click(function(e){
+	$("#pattern-none").click(function (e) {
 		e.preventDefault();
 		$("#pattern-1 span").removeClass("active");
 		$("#pattern-2 span").removeClass("active");

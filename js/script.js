@@ -336,15 +336,6 @@ $(document).ready(function () {
 	$('.photo-item').bind('touchstart touchend', function (e) {
 	});
 
-	// 07. COUNTDOWN
-	//===================================================================================
-	var theday = new Date();
-	theday = new Date(2024, 0 , 7);
-	$('#countdown').countdown({ until: theday, format: 'WDHMS' });
-	$('#countdown').countdown($.countdown.regionalOptions['custom-label']);
-
-	$('#date-countdown').countdown({ until: theday, format: 'WDHMS' });
-
 	// 08. MOBILE MENU
 	//==================================================================================
 	$("#mobile-nav").click(function (e) {
@@ -916,3 +907,25 @@ $(document).ready(function () {
 	});
 });
 
+// 07. COUNTDOWN
+//===================================================================================
+function handleTickInit(tick) {
+
+	var counter = Tick.count.down('2024-01-07T12:00:00+08:00', { format: ['d','h','m','s'] });
+
+	counter.onupdate = function(value) {
+	  tick.value = value;
+	};
+
+	counter.onended = function() {
+		// redirect, uncomment the next line
+		// window.location = 'my-location.html'
+
+		// hide counter, uncomment the next line
+		// tick.root.style.display = 'none';
+
+		// show message, uncomment the next line
+		// document.querySelector('.tick-onended-message').style.display = '';
+	};
+
+}

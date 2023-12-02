@@ -25,7 +25,7 @@
   <!-- Animate -->
   <link rel="stylesheet" href="css/animate/animate.css" type="text/css" />
   <!-- Countdown -->
-  <link rel="stylesheet" href="css/countdown/jquery.countdown.css" type="text/css" />
+  <link rel="stylesheet" href="css/flip/flip.min.css" type="text/css" />
   <!-- Magnific Popup -->
   <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css" type="text/css" />
   <!-- Owl Carousel -->
@@ -977,9 +977,18 @@
               </div>
             </div>
           </div>
-
           <div class="row">
             <div class="col-md-offset-3 col-md-6">
+              <div class="tick animation fadeInUp" data-did-init="handleTickInit" data-credits="false">
+                <div data-repeat="true" data-layout="horizontal fit" data-transform="preset(d, h, m, s) -> delay">
+                  <div class="tick-group">
+                    <div data-key="value" data-repeat="true" data-transform="pad(00) -> split -> delay">
+                      <span data-view="flip" data-style="flip-easing: ease-out-quart"></span>
+                    </div>
+                    <span data-key="label" data-view="text" class="tick-label"></span>
+                  </div>
+                </div>
+              </div>
               <div id="date-countdown" class="circle-countdown animation fadeInUp"></div>
             </div>
           </div>
@@ -1157,8 +1166,7 @@
   <!-- Masonry -->
   <script src="js/masonry/masonry.pkgd.min.js"></script>
   <!-- Countdown -->
-  <script src="js/countdown/jquery.plugin.js"></script>
-  <script src="js/countdown/jquery.countdown.js"></script>
+  <script src="js/flip/flip.min.js"></script>
   <!-- Magnific Popup -->
   <script src="js/magnific-popup/jquery.magnific-popup.js"></script>
   <!-- Owl Carousel -->

@@ -904,6 +904,11 @@ $(document).ready(function () {
 				}, 5000);
 			}
 		}
+		if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
+			var pwaInstall = document.getElementsByTagName('pwa-install')[0];
+
+			pwaInstall.showDialog();
+		}
 	});
 });
 

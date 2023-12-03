@@ -2999,23 +2999,53 @@ footer .image-divider.fixed-height {
     padding: 120px 0
 }
 
-.and {
-    color: #f0394d
-}
-
-.border-column {
-    border-left: 1px solid #8b8b8b;
-    border-right: 1px solid #8b8b8b
-}
-
-#bride-party-map-canvas {
-    height: 560px;
+.event-wrap {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 30px;
     width: 100%;
+    float: left;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
 }
 
-#groom-party-map-canvas {
-    height: 560px;
+.event-wrap h3 {
+    font-size: 14px;
+    color: #000000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    display: block;
+    padding-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+
+.event-wrap .event-col {
+    width: 50%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.event-wrap p {
+    display: block;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: Sofia Sans Condensed;
+    font-size: 20px;
+}
+
+.event-wrap iframe {
     width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .event-wrap {
+        margin-bottom: 10px;
+    }
+}
+
+.event-wrap p {
+    text-align: left;
 }
 
 /* ----------------------------------------------*/
@@ -3032,12 +3062,6 @@ footer .image-divider.fixed-height {
 /* ----------------------------------------------*/
 /* 14.6 Don't Miss It / Countdown Section		 */
 /* ----------------------------------------------*/
-h2#dont-miss-it-title {
-    font-size: 42px;
-    margin-bottom: 30px;
-    font-family: 'Pacifico', cursive;
-}
-
 .tick {
     font-size: 1rem;
     white-space: nowrap;
@@ -3104,6 +3128,7 @@ body {
 .tick-flip {
     border-radius: 0.12em !important;
 }
+
 /* ----------------------------------------------*/
 /* 14.7 More Events Section						 */
 /* ----------------------------------------------*/

@@ -905,19 +905,57 @@ $(document).ready(function () {
 			}
 		}
 	});
+	if ('serviceWorker' in navigator && 'PushManager' in window) {
+		window.addEventListener('beforeinstallprompt', (e) => {
+			e.preventDefault();
+
+			const deferredPrompt = e;
+
+			const installButton = document.createElement('button');
+			installButton.textContent = 'Install App';
+			installButton.style.position = 'fixed';
+			installButton.style.top = '10px';
+			installButton.style.left = '50%';
+			installButton.style.transform = 'translateX(-50%)';
+			installButton.style.zIndex = '9999';
+			installButton.style.padding = '10px 20px';
+			installButton.classList.add('btn-grad');
+			installButton.style.color = 'white';
+			installButton.style.border = 'none';
+			installButton.style.borderRadius = '5px';
+			installButton.style.cursor = 'pointer';
+
+			installButton.addEventListener('click', () => {
+
+				deferredPrompt.prompt();
+
+				deferredPrompt.userChoice.then(choiceResult => {
+					if (choiceResult.outcome === 'accepted') {
+						console.log('App installed');
+					} else {
+						console.log('App installation declined');
+					}
+
+					installButton.style.display = 'none';
+				});
+			});
+
+			document.body.appendChild(installButton);
+		});
+	}
 });
 
 // 07. COUNTDOWN
 //===================================================================================
 function handleTickInit(tick) {
 
-	var counter = Tick.count.down('2024-01-07T12:00:00+08:00', { format: ['d','h','m','s'] });
+	var counter = Tick.count.down('2024-01-07T12:00:00+08:00', { format: ['d', 'h', 'm', 's'] });
 
-	counter.onupdate = function(value) {
-	  tick.value = value;
+	counter.onupdate = function (value) {
+		tick.value = value;
 	};
 
-	counter.onended = function() {
+	counter.onended = function () {
 		// redirect, uncomment the next line
 		// window.location = 'my-location.html'
 

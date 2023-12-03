@@ -316,6 +316,16 @@ $(document).ready(function () {
 				responsive: true,
 			});
 		}
+
+		$('#thank-you').waypoint(function (direction) {
+			if (direction === 'down') {
+				var pwaInstall = document.getElementsByTagName('pwa-install')[0];
+				pwaInstall.showDialog();
+				console.log('test')
+			}
+		}, {
+			offset: '80%'
+		})
 	}); // END of Pace on Hide
 
 
@@ -903,11 +913,6 @@ $(document).ready(function () {
 					canTriggerConfetti = true;
 				}, 5000);
 			}
-		}
-		if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
-			var pwaInstall = document.getElementsByTagName('pwa-install')[0];
-
-			pwaInstall.showDialog();
 		}
 	});
 });

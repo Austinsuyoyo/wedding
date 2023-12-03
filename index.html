@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-  <link rel="manifest" href="icons/site.webmanifest">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#e4b4ae">
   <link rel="shortcut icon" href="icons/favicon.ico">
   <meta name="msapplication-TileColor" content="#e4b4ae">
@@ -1219,20 +1219,19 @@
     };
   </script>
   <!-- Install PWA -->
-  <pwa-install
-    manual-apple="true"
-    manual-chrome="true"
-    disable-chrome="true"
-
-    install-description="Custom call to install text"
-    disable-install-description="true"
-
-    manifest-url="icons/site.webmanifest"
-    name="PWA"
-    description="Progressive web application"         
-    icon="icons/mstile-310x310.png">
-</pwa-install>
+  <pwa-install manifest-url="site.webmanifest"></pwa-install>
   <script type="module" src="js/pwa-install/pwa-install.bundle.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      if (navigator.serviceWorker.controller) {
+        console.log("Active service worker found, no need to register");
+      } else {
+        navigator.serviceWorker.register('js/pwa-install/service-worker.js').then(function (reg) {
+          console.log("Service worker registered");
+        });
+      }
+    }
+  </script>
 </body>
 
 </html>

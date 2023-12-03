@@ -2,7 +2,7 @@ var cacheName = 'PWA_1_' + Date.now();
 
 var filesToCache = [
 	'/',
-	'/icons/site.webmanifest',
+	'/site.webmanifest',
 ];
 
 self.addEventListener('install', function (e) {

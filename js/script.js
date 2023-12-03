@@ -320,7 +320,7 @@ $(document).ready(function () {
 		$('#thank-you').waypoint(function (direction) {
 			if (direction === 'down') {
 				var pwaInstall = document.getElementsByTagName('pwa-install')[0];
-				pwaInstall.showDialog();
+				pwaInstall.showDialog(true);
 				console.log('test')
 			}
 		}, {

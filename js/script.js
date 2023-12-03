@@ -905,7 +905,8 @@ $(document).ready(function () {
 			}
 		}
 	});
-	if ('serviceWorker' in navigator && 'PushManager' in window) {
+	// PWA
+	// if ('serviceWorker' in navigator && 'PushManager' in window) {
 		window.addEventListener('beforeinstallprompt', (e) => {
 			e.preventDefault();
 
@@ -942,7 +943,7 @@ $(document).ready(function () {
 
 			document.body.appendChild(installButton);
 		});
-	}
+	// }
 });
 
 // 07. COUNTDOWN

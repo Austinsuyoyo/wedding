@@ -905,7 +905,15 @@ $(document).ready(function () {
 			}
 		}
 	});
-
+	if ("serviceWorker" in navigator) {
+		if (navigator.serviceWorker.controller) {
+			console.log("Active service worker found, no need to register");
+		} else {
+			navigator.serviceWorker.register('js/pwa-install/service-worker.js', {scope: 'js/pwa-install/'}).then(function (reg) {
+				console.log("Service worker registered");
+			});
+		}
+	}
 });
 
 // 07. COUNTDOWN

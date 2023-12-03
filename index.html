@@ -1218,6 +1218,21 @@
       }
     };
   </script>
+  <!-- Install PWA -->
+  <pwa-install
+    manual-apple="true"
+    manual-chrome="true"
+    disable-chrome="true"
+
+    install-description="Custom call to install text"
+    disable-install-description="true"
+
+    manifest-url="icons/site.webmanifest"
+    name="PWA"
+    description="Progressive web application"         
+    icon="icons/mstile-310x310.png">
+</pwa-install>
+  <script type="module" src="js/pwa-install/pwa-install.bundle.js"></script>
 </body>
 
 </html>

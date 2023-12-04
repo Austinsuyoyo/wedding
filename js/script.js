@@ -34,6 +34,7 @@
 	04.4 Waypoint Sticky Menu Icon (Sidebar Version)
 	04.5 Waypoint Animate CSS
 	04.6 Stellar Parallax
+	04.7 Reach thank you will show Install Dialog
 
 05. PRELOADER HEART ANIMATION (IE10 / 11)
 
@@ -316,13 +317,12 @@ $(document).ready(function () {
 				responsive: true,
 			});
 		}
-		// 04.6 Reach thank you will show Install Dialog
+		// 04.7 Reach thank you will show Install Dialog
 		//------------------------------------------------------------------------------
 		$('#thank-you').waypoint(function (direction) {
 			if (direction === 'down') {
 				var pwaInstall = document.getElementsByTagName('pwa-install')[0];
 				pwaInstall.showDialog(true);
-				console.log('test')
 			}
 		}, {
 			offset: '80%'

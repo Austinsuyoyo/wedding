@@ -1197,10 +1197,8 @@
     };
   </script>
   <!-- Install PWA -->
-  <pwa-install manual-apple="true" manual-chrome="true" manifest-url="site.webmanifest">
-  </pwa-install>
   <script type="module" src="js/pwa-install/pwa-install.bundle.js"></script>
-  <script>
+  <script type="text/javascript">
     if ("serviceWorker" in navigator) {
       if (navigator.serviceWorker.controller) {
         console.log("Active service worker found, no need to register");
@@ -1210,6 +1208,16 @@
         });
       }
     }
+  </script>
+  <pwa-install manual-apple="true" manual-chrome="true" manifest-url="site.webmanifest">
+  </pwa-install>
+  <script type="text/javascript">
+    var pwaInstall = document.getElementById("pwa-install");
+
+    pwaInstall.addEventListener('pwa-install-success-event', (event) => { console.log(event.detail.message) });
+    pwaInstall.addEventListener('pwa-install-fail-event', (event) => { console.log(event.detail.message) });
+    pwaInstall.addEventListener('pwa-user-choice-result-event', (event) => { console.log(event.detail.message) });
+    pwaInstall.addEventListener('pwa-install-available-event', (event) => { console.log(event.detail.message) });
   </script>
 </body>
 

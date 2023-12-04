@@ -927,7 +927,7 @@ function handleTickInit(tick) {
 		tick.value = value;
 	};
 
-	counter.onended = function () {
+	//counter.onended = function () {
 		// redirect, uncomment the next line
 		// window.location = 'my-location.html'
 
@@ -936,6 +936,6 @@ function handleTickInit(tick) {
 
 		// show message, uncomment the next line
 		// document.querySelector('.tick-onended-message').style.display = '';
-	};
+	//};
 
 }

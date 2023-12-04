@@ -929,14 +929,14 @@ function handleTickInit(tick) {
 	};
 
 	//counter.onended = function () {
-		// redirect, uncomment the next line
-		// window.location = 'my-location.html'
+	// redirect, uncomment the next line
+	// window.location = 'my-location.html'
 
-		// hide counter, uncomment the next line
-		// tick.root.style.display = 'none';
+	// hide counter, uncomment the next line
+	// tick.root.style.display = 'none';
 
-		// show message, uncomment the next line
-		// document.querySelector('.tick-onended-message').style.display = '';
+	// show message, uncomment the next line
+	// document.querySelector('.tick-onended-message').style.display = '';
 	//};
 
 }

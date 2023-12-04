@@ -316,7 +316,8 @@ $(document).ready(function () {
 				responsive: true,
 			});
 		}
-
+		// 04.6 Reach thank you will show Install Dialog
+		//------------------------------------------------------------------------------
 		$('#thank-you').waypoint(function (direction) {
 			if (direction === 'down') {
 				var pwaInstall = document.getElementsByTagName('pwa-install')[0];

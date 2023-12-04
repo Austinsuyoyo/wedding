@@ -1212,7 +1212,7 @@
   <pwa-install manual-apple="true" manual-chrome="true" manifest-url="site.webmanifest">
   </pwa-install>
   <script type="text/javascript">
-    var pwaInstall = document.getElementById("pwa-install");
+    var pwaInstall = document.getElementsByTagName('pwa-install')[0];
 
     pwaInstall.addEventListener('pwa-install-success-event', (event) => { console.log(event.detail.message) });
     pwaInstall.addEventListener('pwa-install-fail-event', (event) => { console.log(event.detail.message) });

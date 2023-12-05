@@ -83,23 +83,9 @@
       type="text/css"
     />
     <!-- Icon -->
-    <link
-      rel="stylesheet"
-      href="css/fonts/fontello/css/fontello.css"
-      type="text/css"
-      media="screen"
-    />
+    <script defer src="js/fontawesome/all.min.js"></script>
+    <script defer src="js/fontawesome/fontawesome.min.js"></script>
     <!-- Font -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Arvo:400,700&display=swap"
-      rel="stylesheet"
-      type="text/css"
-    />
     <link
       href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
       rel="stylesheet"
@@ -113,10 +99,6 @@
     <!-- <link href="css/skin/light-teal/light-teal.css" rel="stylesheet" media="screen"> -->
     <!-- <link href="css/skin/light-teal/light-teal-reverse-navbar.css" rel="stylesheet" media="screen"> -->
     <!-- <link href="css/skin/pattern/pattern-1.css" rel="stylesheet" media="screen"> -->
-    <!-- Font Awesome -->
-    <script defer src="js/fontawesome/brands.min.js"></script>
-    <script defer src="js/fontawesome/solid.min.js"></script>
-    <script defer src="js/fontawesome/fontawesome.min.js"></script>
   </head>
 
   <body class="outside-bottom-bar-page">
@@ -126,12 +108,15 @@
         <div class="v-align center-middle">
           <!-- LEFT HEART -->
           <div class="heart-animation">
-            <i class="de-icon-heart"></i>
+            <i
+              class="fa-solid fa-heart fa-spin fa-xl"
+              style="color: #f0394d"
+            ></i>
           </div>
 
           <!-- RIGHT HEART -->
           <div class="heart-animation-reverse">
-            <i class="de-icon-heart"></i>
+            <i class="fa-solid fa-heart fa-spin fa-xl" style="color: #666"></i>
           </div>
         </div>
       </div>
@@ -151,8 +136,10 @@
                 <div
                   class="col-md-offset-3 col-md-6 animation animate__delay-05s fadeInUp"
                 >
-                  <div id="invited">You're Invited</div>
-                  <div class="banner-text withlove medium light">
+                  <div id="invited" style="margin-top: 300px">
+                    You're Invited
+                  </div>
+                  <div class="banner-text medium light">
                     <h1>我們結婚了</h1>
                   </div>
                   <div id="banner-date">- JAN / 7TH / 2024 -</div>
@@ -167,8 +154,9 @@
                   href="#content"
                   class="animation fadeIn animate__delay-1s smooth-scroll"
                   style="visibility: visible"
-                  ><i class="de-icon-down-open"></i
-                ></a>
+                >
+                  <i class="fa-solid fa-caret-down" style="color: #ffffff"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -210,44 +198,53 @@
                 <div class="css-logo rounded">
                   <div class="css-logo-text">
                     <strong>萱</strong>
-                    <i class="de-icon-heart-1"></i><strong>揚</strong>
+                    <i class="fa-solid fa-heart fa-2xs" style="color: #fff"></i>
+                    <strong>揚</strong>
                   </div>
                 </div>
               </a>
             </div>
             <div id="mobile-nav">
-              <i class="de-icon-menu"></i>
+              <i class="fa-solid fa-bars"></i>
             </div>
 
             <ul id="nav-menu" class="nav-smooth-scroll">
-              <li class="first-child">
+              <li>
                 <a href="#main-slider">首頁</a>
               </li>
+              <i
+                class="fa-solid fa-heart fa-flip fa-2xs"
+                style="color: #f0394d"
+              ></i>
               <li>
                 <a href="#couple">主角</a>
               </li>
-              <li class="first-child logo-item">
+              <li class="logo-item">
                 <!-- LOGO -->
                 <div class="logo-wrapper">
                   <!-- CSS LOGO -->
                   <a href="index.html">
                     <div class="css-logo rounded">
                       <div class="css-logo-text">
-                        <strong>萱</strong
-                        ><i
-                          class="fa-solid fa-heart fa-beat-fade fa-2xs"
+                        <strong>萱</strong>
+                        <i
+                          class="fa-solid fa-heart fa-2xs"
                           style="color: #ffffff"
-                        ></i
-                        ><strong>揚</strong>
+                        ></i>
+                        <strong>揚</strong>
                       </div>
                     </div>
                   </a>
                 </div>
                 <!-- END of LOGO -->
               </li>
-              <li class="first-child">
+              <li>
                 <a href="#where-when">場地 &amp; 時間</a>
               </li>
+              <i
+                class="fa-solid fa-heart fa-flip fa-2xs"
+                style="color: #f0394d"
+              ></i>
               <li>
                 <a href="#gallery-section">照片</a>
               </li>
@@ -293,7 +290,7 @@
                     <div class="v-align center-middle">
                       <a href="./images/1365x1365.png" class="magnific-zoom">
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
 
@@ -302,7 +299,7 @@
                         target="_blank"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-link"></i>
+                          <i class="fa-solid fa-link"></i>
                         </div>
                       </a>
                     </div>
@@ -318,7 +315,7 @@
                 </h2>
                 <div class="heart-wrapper">
                   <div class="de-icon circle medium-size custom-heart">
-                    <i class="de-icon-heart"></i>
+                    <i class="fa-solid fa-heart" style="color: #fff"></i>
                   </div>
                 </div>
               </div>
@@ -349,7 +346,7 @@
                     <div class="v-align center-middle">
                       <a href="./images/1365x1365.png" class="magnific-zoom">
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
 
@@ -358,7 +355,7 @@
                         target="_blank"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-link"></i>
+                          <i class="fa-solid fa-link"></i>
                         </div>
                       </a>
                     </div>
@@ -385,400 +382,6 @@
           style="background-image: url(./images/1920x1080.png); height: 600px"
           data-stellar-background-ratio="0.3"
         ></div>
-      </section>
-
-      <!-- OUR STORY SECTION -->
-      <section id="our-story" style="display: none">
-        <div class="container">
-          <!-- ROW-1 -->
-          <div class="row">
-            <!-- SECTION TITLE -->
-            <div class="col-sm-12 col-md-offset-2 col-md-8 text-center">
-              <div class="section-title animation fadeInUp">
-                <h2>OUR <img src="images/heart-icon.png" alt="" /> STORY</h2>
-              </div>
-            </div>
-          </div>
-          <!-- END of ROW-1 -->
-
-          <!-- STORY ROW-1-->
-          <div class="row story-row">
-            <div class="col-sm-12 col-md-offset-1 col-md-4 text-center">
-              <!--PHOTO-ITEM-->
-              <div
-                class="photo-item frame-border animation animate__delay-05s fadeInLeft"
-              >
-                <!--PHOTO-->
-                <img
-                  src="./images/1080x1080.png"
-                  alt=""
-                  class="hover-animation image-zoom-in"
-                  loading="lazy"
-                />
-
-                <!--PHOTO OVERLAY-->
-                <div
-                  class="layer wh100 hidden-black-overlay hover-animation fade-in"
-                ></div>
-                <!--END of PHOTO OVERLAY-->
-
-                <!--ICON LINK-->
-                <div
-                  class="layer wh100 hidden-link hover-animation animate__delay-05s fade-in"
-                >
-                  <div class="alignment">
-                    <div class="v-align center-middle">
-                      <a
-                        href="./images/1080x1080.png"
-                        class="magnific-zoom"
-                        title="Our First Met"
-                      >
-                        <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <!--END of ICON LINK-->
-              </div>
-              <!--END of PHOTO-ITEM-->
-            </div>
-
-            <div
-              class="col-sm-12 col-md-2 text-center story-date-wrapper animation fadeIn"
-            >
-              <div class="arrow-left"></div>
-              <div class="story-date">
-                <div class="date-only">13</div>
-                <div class="month-year">10.18</div>
-              </div>
-              <div class="arrow-right"></div>
-              <div class="clearboth"></div>
-            </div>
-
-            <div
-              class="col-sm-12 col-md-4 animation animate__delay-05s fadeInRight"
-            >
-              <h3>OUR FIRST MET</h3>
-              <p>
-                We first met on October 13th, 2018, when she came to the C++
-                class I was teaching to take attendance for the students. I
-                remember initially noticing her big (a little chubby) belly, but
-                as we talked, I was attracted to her intelligence and
-                gentleness. However, later on, I realized that I was wrong, she
-                was intelligent, but not gentle at all.
-              </p>
-            </div>
-
-            <div class="vertical-line"></div>
-          </div>
-          <!-- END of STORY ROW-1 -->
-
-          <!-- STORY ROW-2-->
-          <div class="row story-row">
-            <div class="col-sm-12 col-md-4 col-md-push-6 text-center">
-              <!--PHOTO-ITEM-->
-              <div
-                class="photo-item frame-border animation animate__delay-05s fadeInLeft"
-              >
-                <!--PHOTO-->
-                <img
-                  src="./images/720x720.png"
-                  alt=""
-                  class="hover-animation image-zoom-in"
-                  loading="lazy"
-                />
-
-                <!--PHOTO OVERLAY-->
-                <div
-                  class="layer wh100 hidden-black-overlay hover-animation fade-in"
-                ></div>
-                <!--END of PHOTO OVERLAY-->
-
-                <!--ICON LINK-->
-                <div
-                  class="layer wh100 hidden-link hover-animation animate__delay-05s fade-in"
-                >
-                  <div class="alignment">
-                    <div class="v-align center-middle">
-                      <a
-                        href="./images/720x720.png"
-                        class="magnific-zoom"
-                        title="Our First Dating"
-                      >
-                        <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <!--END of ICON LINK-->
-              </div>
-              <!--END of PHOTO-ITEM-->
-            </div>
-
-            <div
-              class="col-sm-12 col-md-2 text-center story-date-wrapper animation fadeIn"
-            >
-              <div class="arrow-left"></div>
-              <div class="story-date">
-                <div class="date-only">29</div>
-                <div class="month-year">11.18</div>
-              </div>
-              <div class="arrow-right"></div>
-              <div class="clearboth"></div>
-            </div>
-
-            <div
-              class="col-sm-12 col-md-4 col-md-pull-6 animation animate__delay-05s fadeInRight"
-            >
-              <h3>OUR FIRST DATING</h3>
-              <p>
-                After a few weeks of talking and getting to know each other, I
-                finally worked up the courage to ask her out on a date. I
-                decided to take her to a cute little ice cream shop on Phan Dang
-                Luu street, just opposite Nguyen Hien High School. I remember
-                choosing this place because it was cheap, but I also thought it
-                would be a fun and casual setting for us to get to know each
-                other better.
-              </p>
-            </div>
-
-            <div class="vertical-line"></div>
-          </div>
-          <!-- END of STORY ROW-2 -->
-
-          <!-- STORY ROW-3-->
-          <div class="row story-row">
-            <div class="col-md-offset-1 col-md-4 text-center">
-              <!--PHOTO-ITEM-->
-              <div
-                class="photo-item frame-border animation animate__delay-05s fadeInLeft"
-              >
-                <!--PHOTO-->
-                <img
-                  src="./images/1536x1536.png"
-                  alt=""
-                  class="hover-animation image-zoom-in"
-                  loading="lazy"
-                />
-
-                <!--PHOTO OVERLAY-->
-                <div
-                  class="layer wh100 hidden-black-overlay hover-animation fade-in"
-                ></div>
-                <!--END of PHOTO OVERLAY-->
-
-                <!--ICON LINK-->
-                <div
-                  class="layer wh100 hidden-link hover-animation animate__delay-05s fade-in"
-                >
-                  <div class="alignment">
-                    <div class="v-align center-middle">
-                      <a
-                        href="./images/1536x1536.png"
-                        class="magnific-zoom"
-                        title="Becoming a Couple"
-                      >
-                        <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <!--END of ICON LINK-->
-              </div>
-              <!--END of PHOTO-ITEM-->
-            </div>
-
-            <div
-              class="col-md-2 text-center story-date-wrapper animation fadeIn"
-            >
-              <div class="arrow-left"></div>
-              <div class="story-date">
-                <div class="date-only">02</div>
-                <div class="month-year">01.19</div>
-              </div>
-              <div class="arrow-right"></div>
-              <div class="clearboth"></div>
-            </div>
-
-            <div class="col-md-4 animation animate__delay-05s fadeInRight">
-              <h3>BECOMING A COUPLE</h3>
-              <p>
-                After a few more dates, I realized that I had fallen deeply in
-                love with her, and I knew that I wanted to make our relationship
-                official. It was on January 2nd, 2019 that I asked her to be my
-                girlfriend, and she said yes! I remember feeling so happy and
-                excited, like I was on top of the world.
-              </p>
-            </div>
-
-            <div class="vertical-line"></div>
-          </div>
-          <!-- END of STORY ROW-3 -->
-
-          <!-- STORY ROW-4 -->
-          <div class="row story-row">
-            <div class="col-sm-12 col-md-4 col-md-push-6 text-center">
-              <!--PHOTO-ITEM-->
-              <div
-                class="photo-item frame-border animation animate__delay-05s fadeInLeft"
-              >
-                <!--PHOTO-->
-                <img
-                  src="./images/1365x1365.png"
-                  alt=""
-                  class="hover-animation image-zoom-in"
-                  loading="lazy"
-                />
-
-                <!--PHOTO OVERLAY-->
-                <div
-                  class="layer wh100 hidden-black-overlay hover-animation fade-in"
-                ></div>
-                <!--END of PHOTO OVERLAY-->
-
-                <!--ICON LINK-->
-                <div
-                  class="layer wh100 hidden-link hover-animation animate__delay-05s fade-in"
-                >
-                  <div class="alignment">
-                    <div class="v-align center-middle">
-                      <a
-                        href="./images/1365x1365.png"
-                        class="magnific-zoom"
-                        title="The Proposal"
-                      >
-                        <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <!--END of ICON LINK-->
-              </div>
-              <!--END of PHOTO-ITEM-->
-            </div>
-
-            <div
-              class="col-sm-12 col-md-2 text-center story-date-wrapper animation fadeIn"
-            >
-              <div class="arrow-left"></div>
-              <div class="story-date">
-                <div class="date-only">30</div>
-                <div class="month-year">11.21</div>
-              </div>
-              <div class="arrow-right"></div>
-              <div class="clearboth"></div>
-            </div>
-
-            <div
-              class="col-sm-12 col-md-4 col-md-pull-6 animation animate__delay-05s fadeInRight"
-            >
-              <h3>THE PROPOSAL</h3>
-              <p>
-                On November 30th, 2021, I proposed to her near Dragon Bridge. I
-                didn't say anything romantic, but I gave her a ring and told her
-                it was my gift. She said yes, and we were both overjoyed. It was
-                a simple and spontaneous moment, but it was perfect for us and
-                the start of our engagement.
-              </p>
-            </div>
-
-            <div class="vertical-line"></div>
-          </div>
-          <!-- END of STORY ROW-4 -->
-
-          <!-- STORY ROW-5-->
-          <div class="row story-row">
-            <div class="col-md-offset-1 col-md-4 text-center">
-              <!--PHOTO-ITEM-->
-              <div
-                class="photo-item frame-border animation animate__delay-05s fadeInLeft"
-              >
-                <!--PHOTO-->
-                <img
-                  src="./images/1365x1365.png"
-                  alt=""
-                  class="hover-animation image-zoom-in"
-                  loading="lazy"
-                />
-
-                <!--PHOTO OVERLAY-->
-                <div
-                  class="layer wh100 hidden-black-overlay hover-animation fade-in"
-                ></div>
-                <!--END of PHOTO OVERLAY-->
-
-                <!--ICON LINK-->
-                <div
-                  class="layer wh100 hidden-link hover-animation animate__delay-05s fade-in"
-                >
-                  <div class="alignment">
-                    <div class="v-align center-middle">
-                      <a
-                        href="./images/1365x1365.png"
-                        class="magnific-zoom"
-                        title="Our Engagement"
-                      >
-                        <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <!--END of ICON LINK-->
-              </div>
-              <!--END of PHOTO-ITEM-->
-            </div>
-
-            <div
-              class="col-md-2 text-center story-date-wrapper animation fadeIn"
-            >
-              <div class="arrow-left"></div>
-              <div class="story-date">
-                <div class="date-only">20</div>
-                <div class="month-year">03.22</div>
-              </div>
-              <div class="arrow-right"></div>
-              <div class="clearboth"></div>
-            </div>
-
-            <div class="col-md-4 animation animate__delay-05s fadeInRight">
-              <h3>OUR ENGAGEMENT</h3>
-              <p>
-                On March 20th, 2022, we celebrated our engagement surrounded by
-                our closest family and friends. It was a beautiful and
-                unforgettable moment that marked the start of our journey
-                towards marriage.
-              </p>
-            </div>
-
-            <div class="vertical-line"></div>
-          </div>
-          <!-- END of STORY ROW-5 -->
-
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <div id="end-of-story" class="animation fadeInUp">
-                <h2>AND TODAY... WE ARE GETTING MARRIED</h2>
-                <div class="heart-divider">
-                  <span class="grey-line"></span>
-                  <i class="de-icon-heart pink-heart"></i>
-                  <i class="de-icon-heart grey-heart"></i>
-                  <span class="grey-line"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END of CONTAINER -->
       </section>
 
       <!-- PHOTO DIVIDER -->
@@ -919,7 +522,7 @@
                         title="Gallery 1"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
                     </div>
@@ -961,7 +564,7 @@
                         title="Gallery 2"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
                     </div>
@@ -1003,7 +606,7 @@
                         title="Gallery 3"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
                     </div>
@@ -1045,7 +648,7 @@
                         title="Gallery 4"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
                     </div>
@@ -1087,7 +690,7 @@
                         title="Gallery 5"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
                     </div>
@@ -1129,7 +732,7 @@
                         title="Gallery 6"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
                     </div>
@@ -1171,7 +774,7 @@
                         title="Gallery 7"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
                     </div>
@@ -1213,7 +816,7 @@
                         title="Gallery 8"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
                     </div>
@@ -1255,7 +858,7 @@
                         title="Gallery 9"
                       >
                         <div class="de-icon circle light medium-size inline">
-                          <i class="de-icon-zoom-in"></i>
+                          <i class="fa-solid fa-plus"></i>
                         </div>
                       </a>
                     </div>
@@ -1284,7 +887,7 @@
                   id="dont-miss-it-title"
                   class="text-center animation fadeInUp"
                 >
-                  千萬別錯過！
+                  「幸福即將降臨，倒數開始！」
                 </h2>
 
                 <div class="text-center animation fadeInUp">
@@ -1495,8 +1098,8 @@
                     class="heart-divider animation animate__delay-05s fadeInUp"
                   >
                     <span class="white-line"></span>
-                    <i class="de-icon-heart pink-heart"></i>
-                    <i class="de-icon-heart white-heart"></i>
+                    <i class="fa-solid fa-heart pink-heart"></i>
+                    <i class="fa-solid fa-heart white-heart"></i>
                     <span class="white-line"></span>
                   </div>
 
@@ -1504,7 +1107,7 @@
                     id="footer-couple-name"
                     class="animation animate__delay-05s fadeInUp"
                   >
-                    HUY & THUY
+                    懿萱 & 致揚
                   </div>
                 </div>
               </div>

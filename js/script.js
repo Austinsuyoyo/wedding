@@ -317,6 +317,7 @@ $(document).ready(function () {
 				responsive: true,
 			});
 		}
+
 		// 04.7 Reach thank you will show Install Dialog
 		//------------------------------------------------------------------------------
 		$('#thank-you').waypoint(function (direction) {
@@ -326,6 +327,31 @@ $(document).ready(function () {
 			}
 		}, {
 			offset: '80%'
+		})
+
+		// 04.8 Google Map
+		//------------------------------------------------------------------------------
+		$('#taichung-wedding-map').waypoint(function (direction) {
+			if (direction === 'down') {
+				var dataSrc = $(this.element).attr("data-src");
+				var iframeElement = document.createElement("iframe");
+				iframeElement.src = dataSrc;
+				$(this.element).append(iframeElement);
+				this.destroy();
+			}
+		}, {
+			offset: '90%'
+		})
+		$('#kaohsiung-wedding-map').waypoint(function (direction) {
+			if (direction === 'down') {
+				var dataSrc = $(this.element).attr("data-src");
+				var iframeElement = document.createElement("iframe");
+				iframeElement.src = dataSrc;
+				$(this.element).append(iframeElement);
+				this.destroy();
+			}
+		}, {
+			offset: '90%'
 		})
 	}); // END of Pace on Hide
 

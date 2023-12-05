@@ -3053,7 +3053,7 @@ footer .image-divider.fixed-height {
 }
 
 #taichung-wedding-map, #kaohsiung-wedding-map{
-    background: url(/image.webp); 
+    /* background: url(/image.webp); */
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -4140,7 +4140,7 @@ a:hover .navbar-setting-button,
 }
 
 .hashtag {
-    color: #2e89ff
+    color: #0E5871;
 }
 
 @media screen and (max-width: 991px) {

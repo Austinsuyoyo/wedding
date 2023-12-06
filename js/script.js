@@ -324,6 +324,8 @@ $(document).ready(function () {
 			if (direction === 'down') {
 				var pwaInstall = document.getElementsByTagName('pwa-install')[0];
 				pwaInstall.showDialog();
+				// run only once
+				this.destroy();
 			}
 		}, {
 			offset: '80%'
@@ -337,6 +339,7 @@ $(document).ready(function () {
 				var iframeElement = document.createElement("iframe");
 				iframeElement.src = dataSrc;
 				$(this.element).append(iframeElement);
+				// run only once
 				this.destroy();
 			}
 		}, {
@@ -348,6 +351,7 @@ $(document).ready(function () {
 				var iframeElement = document.createElement("iframe");
 				iframeElement.src = dataSrc;
 				$(this.element).append(iframeElement);
+				// run only once
 				this.destroy();
 			}
 		}, {

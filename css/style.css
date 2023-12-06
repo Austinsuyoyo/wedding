@@ -59,8 +59,6 @@
 
 06. MAIN-SLIDER
 	06.1 Main Slider Height
-	06.2 Main Slider Flexslider
-		06.2.1 Main Slider Flexslider Control Nav & Paging
 	06.3 Main Slider Slide-Image
 	06.4 Main Slider Slide-Video
 	06.5 Main Slider Title
@@ -71,7 +69,6 @@
 		06.5.6 Save The Date Title
 	06.6 Each Slide Overlay
 	06.7 Each Slide Caption
-	06.8 Hack Flexslider Fade for Firefox & IE11
 	06.9 Loop Animation
 		06.9.1 Zoom
 		06.9.2 Left-Right
@@ -973,64 +970,6 @@ img.with-border {
 }
 
 /* ----------------------------------------------*/
-/* 06.2 Main Slider Flexslider			  		 */
-/* ----------------------------------------------*/
-#main-slider.flexslider {
-    border: none;
-}
-
-#main-slider .slides,
-#main-slider.flexslider .slides li {
-    position: relative;
-    height: inherit;
-    width: 100%;
-    overflow: hidden;
-}
-
-#main-slider.flexslider .flex-viewport {
-    position: relative;
-    height: inherit;
-}
-
-/* 06.2.1 Main Slider Flexslider Control Nav & Paging */
-/* ----------------------------------------------*/
-#main-slider .flex-control-nav,
-.flex-control-paging {
-    background-color: transparent;
-    !important;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 0;
-    z-index: 4;
-}
-
-#main-slider.flexslider .flex-direction-nav .flex-prev {
-    left: 0px;
-}
-
-#main-slider.flexslider .flex-direction-nav .flex-next {
-    right: 0px;
-    text-align: right;
-}
-
-#main-slider.flexslider:hover .flex-prev {
-    opacity: 0.7;
-    left: 100px;
-}
-
-#main-slider.flexslider:hover .flex-next {
-    opacity: 0.7;
-    right: 100px;
-}
-
-
-#main-slider .flex-direction-nav a {
-    z-index: 4;
-    line-height: 40px;
-}
-
-/* ----------------------------------------------*/
 /* 06.3 Main Slider Slide-Image		  		 	 */
 /* ----------------------------------------------*/
 
@@ -1183,15 +1122,6 @@ img.with-border {
 
 .use-animation {
     visibility: hidden
-}
-
-/* ----------------------------------------------*/
-/* 06.8 Hack Flexslider Fade for Firefox & IE11	 */
-/* ----------------------------------------------*/
-.flexslider .slides.css-fade>li {
-    -webkit-transition: opacity 1s ease;
-    -moz-transition: opacity 1s ease;
-    transition: opacity 1s ease;
 }
 
 /* ----------------------------------------------*/
@@ -2850,13 +2780,14 @@ footer .image-divider.fixed-height {
 #invited {
     font-family: 'pacificoregular', cursive;
     font-size: 36px;
-    margin-top: 160px;
+    margin-top: 0px;
 }
 
 #banner-date {
     font-family: sans-serif;
     letter-spacing: 3px;
     font-size: 14px;
+    margin-bottom: 200px
 }
 
 /* ----------------------------------------------*/
@@ -3015,10 +2946,10 @@ footer .image-divider.fixed-height {
     margin-bottom: 30px;
 }
 
-.event-wrap p {
+.event-wrap p, .event-wrap span{
     display: block;
     color: rgba(0, 0, 0, 0.8);
-    font-family: Sofia Sans Condensed;
+    font-family: sans-serif;
     font-size: 20px;
 }
 
@@ -3040,8 +2971,23 @@ footer .image-divider.fixed-height {
 .event-wrap p {
     text-align: left;
 }
+.event-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
 
-#taichung-wedding-map, #kaohsiung-wedding-map{
+.event-col {
+    text-align: center;
+}
+
+.event-col p {
+    text-align: left;
+    margin: 0;
+}
+#taichung-wedding-map,
+#kaohsiung-wedding-map {
     /* background: url(/image.webp); */
     background-size: cover;
     position: relative;
@@ -3445,7 +3391,7 @@ a:hover .navbar-setting-button,
         text-align: left !important;
         width: 100% !important;
         background-color: #FFF;
-        height: 330px;
+        /* height: 330px; */
         overflow: auto;
     }
 
@@ -3617,30 +3563,6 @@ a:hover .navbar-setting-button,
     #menuicon-bar.menuicon-left #sticky-menuicon {
         left: 30px;
     }
-
-
-    /* 06.2.1 Main Slider Flexslider Control Nav & Paging */
-    /* ----------------------------------------------*/
-    #main-slider.flexslider:hover .flex-prev {
-        opacity: 0.4;
-        left: 20px;
-    }
-
-    #main-slider.flexslider:hover .flex-next {
-        opacity: 0.4;
-        right: 20px;
-    }
-
-    #main-slider.flexslider .flex-direction-nav .flex-prev {
-        opacity: 0.4;
-        left: 20px;
-    }
-
-    #main-slider.flexslider .flex-direction-nav .flex-next {
-        opacity: 0.4;
-        right: 20px;
-    }
-
 
     /* ----------------------------------------------*/
     /* 07.1 PAGE LAYOUT						 		 */
@@ -4136,4 +4058,14 @@ a:hover .navbar-setting-button,
     #rsvpform>div.row {
         display: block;
     }
+}
+/* ----------------------------------------------*/
+/* Font Awesome     				 			 */
+/* ----------------------------------------------*/
+.wait-for-icons {
+    visibility: hidden;
+}
+
+.fontawesome-i2svg-active .wait-for-icons {
+    visibility: initial;
 }

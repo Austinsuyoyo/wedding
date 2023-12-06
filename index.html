@@ -55,12 +55,6 @@
     <!-- Pace -->
     <link rel="stylesheet" href="css/preloader.css" media="screen" />
     <link rel="stylesheet" href="css/preloader-default.css" media="screen" />
-    <!-- Flexslider -->
-    <link
-      rel="stylesheet"
-      href="css/flexslider/flexslider.css"
-      type="text/css"
-    />
     <!-- Animate -->
     <link rel="stylesheet" href="css/animate/animate.css" type="text/css" />
     <!-- Countdown -->
@@ -83,7 +77,8 @@
       type="text/css"
     />
     <!-- Icon -->
-    <script defer src="js/fontawesome/all.min.js"></script>
+    <script defer src="js/fontawesome/regular.min.js"></script>
+    <script defer src="js/fontawesome/solid.min.js"></script>
     <script defer src="js/fontawesome/fontawesome.min.js"></script>
     <!-- Font -->
     <link href="css/fonts/fonts.css" rel="stylesheet" type="text/css" />
@@ -96,7 +91,7 @@
     <!-- <link href="css/skin/pattern/pattern-1.css" rel="stylesheet" media="screen"> -->
   </head>
 
-  <body class="outside-bottom-bar-page">
+  <body class="outside-bottom-bar-page wait-for-icons">
     <!--PRELOADER-->
     <div id="preloader">
       <div class="alignment">
@@ -119,13 +114,13 @@
     <!--END of PRELOADER-->
 
     <!-- MAIN SLIDER -->
-    <section id="main-slider" class="flexslider fullscreen">
+    <section id="main-slider" class="fullscreen">
       <!-- MAIN SLIDER TITLE OUTTER WRAPPER -->
       <div class="slide-title-outter-wrapper">
         <!-- MAIN SLIDER TITLE INNER WRAPPER -->
         <div class="slide-title-inner-wrapper">
           <!-- TITLE 2 -->
-          <div class="slide-title align-middle">
+          <div class="slide-title align-bottom">
             <div class="container">
               <div class="row">
                 <div
@@ -159,33 +154,21 @@
         </div>
         <!-- END of MAIN SLIDER TITLE INNER WRAPPER -->
       </div>
+      <div
+        data-stellar-ratio="0.5"
+        class="slide-image"
+        style="
+          background-image: url(./images/main.webp);
+          background-position: top center;
+        "
+      ></div>
       <!-- END of MAIN SLIDER TITLE OUTTER WRAPPER -->
-
-      <!-- MAIN SLIDER IMAGES -->
-
-      <ul class="slides">
-        <li>
-          <!-- SLIDE IMAGE -->
-          <div
-            data-stellar-ratio="0.5"
-            class="slide-image"
-            style="
-              background-image: url(./images/main.webp);
-              background-position: top center;
-            "
-          ></div>
-
-          <!-- SLIDE OVERLAY -->
-          <div class="slide-overlay" style="opacity: 0"></div>
-        </li>
-      </ul>
-      <!-- END of MAIN SLIDER IMAGES -->
 
       <!-- NAVIGATION -->
       <header id="nav-header">
         <nav
           id="nav-bar"
-          class="bottom-bar outside fluid-width block-color nav-center sticky-nav animation fadeIn"
+          class="bottom-bar outside fluid-width block-color nav-center sticky-nav"
         >
           <div id="nav-wrapper">
             <div class="logo-wrapper">
@@ -423,16 +406,26 @@
             <div class="col-md-6 col-sm-6 text-center">
               <div class="event-wrap animate-box">
                 <h3>結婚宴</h3>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>2024年 01月 07日</span>
+                <div class="event-row">
+                  <div class="event-col">
+                    <i
+                      class="fa-regular fa-calendar fa-xl"
+                      style="color: #333333"
+                    ></i>
+                    <span>2024年 01月 07日</span>
+                  </div>
+                  <div class="event-col">
+                    <i
+                      class="fa-regular fa-clock fa-xl"
+                      style="color: #333333"
+                    ></i>
+                    <span>11:58 AM</span>
+                  </div>
                 </div>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>11:58 AM</span>
+                <div class="event-row">
+                  <p>地點：非常棧婚禮會館</p>
+                  <p>地址：台中市南屯區東興路二段150號</p>
                 </div>
-                <p>地點：非常棧婚禮會館</p>
-                <p>地址：台中市南屯區東興路二段150號</p>
                 <div
                   id="taichung-wedding-map"
                   data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14563.52622319583!2d120.6530752!3d24.1407974!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dbb3dfb5a27%3A0xe45f79db1129c54f!2z6Z2e5bi45qOn5ama56au5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1701746280285!5m2!1szh-TW!2stw"
@@ -442,16 +435,26 @@
             <div class="col-md-6 col-sm-6 text-center">
               <div class="event-wrap animate-box">
                 <h3>歸寧宴</h3>
-                <div class="event-col">
-                  <i class="icon-calendar"></i>
-                  <span>2024年 01月 28日</span>
+                <div class="event-row">
+                  <div class="event-col">
+                    <i
+                      class="fa-regular fa-calendar fa-xl"
+                      style="color: #333333"
+                    ></i>
+                    <span>2024年 01月 28日</span>
+                  </div>
+                  <div class="event-col">
+                    <i
+                      class="fa-regular fa-clock fa-xl"
+                      style="color: #333333"
+                    ></i>
+                    <span>11:58 AM</span>
+                  </div>
                 </div>
-                <div class="event-col">
-                  <i class="icon-clock"></i>
-                  <span>11:58 AM</span>
+                <div class="event-row">
+                  <p>地點：巨蛋文尚會館</p>
+                  <p>地址：高雄市左營區文上路5號</p>
                 </div>
-                <p>地點：巨蛋文尚會館</p>
-                <p>地址：高雄市左營區文上路5號</p>
                 <div
                   id="kaohsiung-wedding-map"
                   data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14726.080354375512!2d120.3009235!3d22.6716751!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0508e474f521%3A0x63396ad7bb5f842a!2z5beo6JuL5paH5bCa5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1701747393025!5m2!1szh-TW!2stw"
@@ -471,7 +474,7 @@
             <!-- SECTION TITLE -->
             <div class="col-md-offset-2 col-md-8 text-center">
               <div class="section-title animation fadeInUp">
-                <h2>OUR <img src="images/heart-icon.png" alt="" /> GALLERY</h2>
+                <h2>我們<img src="images/heart-icon.png" alt="" />相簿</h2>
 
                 <p>
                   一張照片勝過千言萬語！請幫助我們捕捉我們婚禮當天的魔幻時刻，使用社交媒體上的標籤
@@ -1025,8 +1028,6 @@
     <script src="js/tinynav/tinynav.min.js"></script>
     <!-- SmoothScroll -->
     <script src="js/smoothscroll/jquery.smooth-scroll.js"></script>
-    <!-- Flexslider -->
-    <script src="js/flexslider/jquery.flexslider.js"></script>
     <!-- Sticky -->
     <script src="js/sticky/jquery.sticky.js"></script>
     <!-- Waypoint -->
@@ -1052,12 +1053,8 @@
     <script src="js/rsvp/rsvp.js"></script>
     <!-- Wishes -->
     <script src="js/wishes/wishes.js"></script>
-
     <!-- Custom Core Script -->
     <script type="text/javascript" src="js/script.js"></script>
-    <!-- <script type="text/javascript" src="js/map-script.js"></script> -->
-    <!-- Custom Additional Script -->
-    <script type="text/javascript" src="js/main-slider-fade.js"></script>
     <!-- Fix jQuery - Use passive listeners to improve scrolling performance -->
     <script>
       jQuery.event.special.touchstart = {

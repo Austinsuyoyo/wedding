@@ -2782,7 +2782,7 @@ footer .image-divider.fixed-height {
 }
 
 #footer-couple-name {
-    font-family: sans-serif;
+    font-family: 'HYXinHaiXingKaiW', sans-serif;
     font-size: 20px;
     color: #FFF;
     letter-spacing: 3px;
@@ -4107,7 +4107,7 @@ a:hover .navbar-setting-button,
         }
 
         #footer-couple-name {
-            font-family: sans-serif;
+            font-family: 'HYXinHaiXingKaiW', sans-serif;
             font-size: 15px;
             color: #FFF;
             letter-spacing: 3px;

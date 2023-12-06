@@ -1,17 +1,11 @@
 @font-face {
-    font-family: "HYXinHaiXingKaiW";
-    src: url("HYXinHaiXingKaiW.eot"); /* IE9 */
-    src: url("HYXinHaiXingKaiW.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-
-    url("HYXinHaiXingKaiW.woff") format("woff"), /* chrome、firefox */
-    url("HYXinHaiXingKaiW.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
-
-    url("HYXinHaiXingKaiW.svg#HYXinHaiXingKaiW") format("svg"); /* iOS 4.1- */
-    font-style: normal;
+    font-family: 'HYXinHaiXingKaiW';
+    src: url('HYXinHaiXingKaiW.woff2') format('woff2'),
+         url('HYXinHaiXingKaiW.woff') format('woff');
     font-weight: normal;
+    font-style: normal;
     font-display: fallback;
 }
-
 @font-face {
     font-family: 'pacificoregular';
     src: url('pacifico-regular-webfont.woff2') format('woff2'),

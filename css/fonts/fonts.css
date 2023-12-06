@@ -9,7 +9,7 @@
     url("HYXinHaiXingKaiW.svg#HYXinHaiXingKaiW") format("svg"); /* iOS 4.1- */
     font-style: normal;
     font-weight: normal;
-    font-display: swap;
+    font-display: fallback;
 }
 
 @font-face {
@@ -18,5 +18,5 @@
          url('pacifico-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: fallback;
 }

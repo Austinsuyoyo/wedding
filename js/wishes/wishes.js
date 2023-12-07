@@ -35,9 +35,10 @@
           mouseDrag: true,
           controls: false,
         });
-
-        // need refresh when whises show up
-        $(window).data("plugin_stellar").refresh();
+        if (!device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari()) {
+          // need refresh when whises show up
+          $(window).data("plugin_stellar").refresh();
+        }
       }
     );
   };

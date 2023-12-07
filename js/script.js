@@ -272,8 +272,7 @@ $(document).ready(function () {
 
 		// 04.4 Waypoint Sticky Menu Icon (Sidebar Version)
 		//------------------------------------------------------------------------------
-
-		var sticky_menuicon_waypoint = $('#menu-icon').waypoint(function (direction) {
+		$('#menu-icon').waypoint(function (direction) {
 			if (direction === 'down') {
 				$('#sticky-menuicon').show();
 			}
@@ -306,6 +305,7 @@ $(document).ready(function () {
 					offset: '90%'
 				});
 			});
+			
 		}
 
 		// 04.6 Stellar Parallax

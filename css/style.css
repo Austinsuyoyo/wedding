@@ -2943,14 +2943,15 @@ footer .image-divider.fixed-height {
 .event-wrap .event-col {
     width: 50%;
     float: left;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.event-wrap p, .event-wrap span{
+.event-wrap p,
+.event-wrap span {
     display: block;
     color: rgba(0, 0, 0, 0.8);
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .event-wrap iframe {
@@ -2962,6 +2963,10 @@ footer .image-divider.fixed-height {
     border: 0;
 }
 
+.event-col span {
+    margin-top: 10px;
+}
+
 @media (max-width: 767px) {
     .event-wrap {
         margin-bottom: 10px;
@@ -2970,7 +2975,9 @@ footer .image-divider.fixed-height {
 
 .event-wrap p {
     text-align: left;
+    line-height: 2;
 }
+
 .event-row {
     display: flex;
     justify-content: space-between;
@@ -2988,14 +2995,14 @@ footer .image-divider.fixed-height {
 }
 #taichung-wedding-map,
 #kaohsiung-wedding-map {
-    /* background: url(/image.webp); */
+    /* background: url(/image.webp);
+	*/
     background-size: cover;
     position: relative;
     overflow: hidden;
     padding-top: 76.25%;
     border: unset;
 }
-
 
 /* ----------------------------------------------*/
 /* 14.5 Gallery Section							 */
@@ -4059,6 +4066,7 @@ a:hover .navbar-setting-button,
         display: block;
     }
 }
+
 /* ----------------------------------------------*/
 /* Font Awesome     				 			 */
 /* ----------------------------------------------*/

@@ -4066,14 +4066,3 @@ a:hover .navbar-setting-button,
         display: block;
     }
 }
-
-/* ----------------------------------------------*/
-/* Font Awesome     				 			 */
-/* ----------------------------------------------*/
-.wait-for-icons {
-    visibility: hidden;
-}
-
-.fontawesome-i2svg-active .wait-for-icons {
-    visibility: initial;
-}

@@ -34,6 +34,7 @@
           rewind: true,
           mouseDrag: true,
           controls: false,
+          preventScrollOnTouch: "force"
         });
         if (!device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari()) {
           // need refresh when whises show up

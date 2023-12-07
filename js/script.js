@@ -46,10 +46,7 @@
 
 09. DOUBLE TAP DROP DOWN MENU
 
-10. OWL CAROUSEL
-	10.1 OWL CAROUSEL - GIFT REGISTRY
-	10.2 OWL CAROUSEL - MORE EVENTS (ONEPAGE)
-	10.3 OWL CAROUSEL - REGISTRY LOGO (ONEPAGE)
+10. TINY SLIDER
 
 11. RSVP
 	11.1 Custom Checkbox
@@ -397,47 +394,10 @@ $(document).ready(function () {
 		$('#nav-menu').doubleTapToGo();
 	}
 
-	// 10. OWL CAROUSEL
+	// 10. TINY SLIDER
 	//==================================================================================
-
-	// 10.1 OWL CAROUSEL - GIFT REGISTRY
-	//------------------------------------------------------------------------------
-	if ($("#gift-registry").length) {
-		$("#gift-registry").owlCarousel({
-			items: 3,
-			autoPlay: 2000,
-			stopOnHover: true,
-			pagination: true,
-		});
-
-		if (device.tablet() || device.mobile()) {
-			var owl_gift = $("#gift-registry").data('owlCarousel');
-			owl_gift.stop()
-		}
-	}
-
-	// 10.2 OWL CAROUSEL - MORE EVENTS (ONEPAGE)
-	//------------------------------------------------------------------------------
-	if ($("#events-carousel").length) {
-		$("#events-carousel").owlCarousel({
-			items: 2,
-			itemsDesktopSmall: [979, 2],
-			autoPlay: 2000,
-			stopOnHover: true,
-			pagination: true,
-			navigation: false,
-		});
-
-		if (device.tablet() || device.mobile()) {
-			var owl_events = $("#events-carousel").data('owlCarousel');
-			owl_events.stop()
-		}
-	}
-
-	// 10.3 OWL CAROUSEL - REGISTRY LOGO (ONEPAGE)
-	//------------------------------------------------------------------------------
-	if ($("#friends-wishes").length) {
-		$("#friends-wishes").ajax_wishes();
+	if ($(".wish-slider").length) {
+		$(".wish-slider").ajax_wishes();
 	}
 
 	// 11. RSVP

@@ -1,37 +1,43 @@
-(function($) {
+(function ($) {
   "use strict";
 
-  $.fn.ajax_wishes = function() {
+  $.fn.ajax_wishes = function () {
     $.get(
       "https://script.google.com/macros/s/AKfycbwsTMbaEG_QEWNIq8h1N8i3GYcV5Uietch3wvYqpkPlAxxduJ1vdV7k28NEbRNbym6e/exec",
-      function(response) {
+      function (response) {
         if (response.result != "success") {
-          return
+          return;
         }
 
         var wishes = response.data;
-        wishes.forEach(function(wish) {
-          var wishHtml = '<div class="item">' +
-            '<b class="wish-name">' + wish.name + '</b>' +
-            '<p class="wish-message">' + wish.message + '</p>' +
-            '</div>';
+        wishes.forEach(function (wish) {
+          var wishHtml =
+            '<div><div class="item">' +
+            '<b class="wish-name">' +
+            wish.name +
+            "</b>" +
+            '<p class="wish-message">' +
+            wish.message +
+            "</p>" +
+            "</div></div>";
 
-          $('#friends-wishes').append(wishHtml);
+          $(".wish-slider").append(wishHtml);
         });
 
-
-        $("#friends-wishes").owlCarousel({
+        var slider = tns({
+          container: ".wish-slider", // 替换为你的轮播容器选择器
           items: 3,
-          autoPlay: 2000,
-          stopOnHover: true,
-          pagination: false,
-          navigation: false,
+          nav: false,
+          center: true,
+          arrowKeys: true,
+          lazyload: true,
+          rewind: true,
+          mouseDrag: true,
+          controls: false,
         });
 
-        if (device.tablet() || device.mobile()) {
-          var owl_logo = $("#friends-wishes").data('owlCarousel');
-          owl_logo.stop()
-        }
+        // need refresh when whises show up
+        $(window).data("plugin_stellar").refresh();
       }
     );
   };

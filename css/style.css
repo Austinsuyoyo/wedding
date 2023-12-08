@@ -4058,7 +4058,9 @@ a:hover .navbar-setting-button,
 }
 
 .hashtag {
-    color: #0000EE;
+    color: #0050B3;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 991px) {

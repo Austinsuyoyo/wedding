@@ -8,6 +8,21 @@
         if (response.result != "success") {
           return;
         }
+        var isIE9 = function isIE9() {
+          if (window.navigator.userAgent.indexOf("MSIE 9.0") > 0) {
+            return 1;
+          }
+        };
+        var isIE10 = function isIE10() {
+          if (window.navigator.userAgent.indexOf("MSIE 10.0") > 0) {
+            return 1;
+          }
+        };
+        var isSafari = function isSafari() {
+          if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Mac") != -1) {
+            return 1;
+          }
+        };
 
         var wishes = response.data;
         wishes.forEach(function (wish) {
@@ -25,7 +40,7 @@
         });
 
         var slider = tns({
-          container: ".wish-slider", // 替换为你的轮播容器选择器
+          container: ".wish-slider",
           items: 3,
           nav: false,
           center: true,
@@ -34,10 +49,10 @@
           rewind: true,
           mouseDrag: true,
           controls: false,
-          preventScrollOnTouch: "auto"
+          preventScrollOnTouch: "auto",
         });
+        // need refresh when whises show up
         if (!device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari()) {
-          // need refresh when whises show up
           $(window).data("plugin_stellar").refresh();
         }
       }

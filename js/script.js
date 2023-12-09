@@ -157,6 +157,18 @@ $(document).ready(function () {
 
 	// 02. FULLSCREEN CLASS
 	//==================================================================================
+	var fullscreen = function () {
+		var fheight = $(window).height();
+		$('.fullscreen').css("height", fheight);
+	}
+
+	//Execute on load
+	fullscreen();
+
+	//Execute on window resize
+	$(window).resize(function () {
+		fullscreen();
+	});
 
 	// 03. HIDDEN ALL ANIMATION CLASS
 	//==================================================================================

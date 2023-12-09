@@ -1676,7 +1676,7 @@ input[type=submit]:hover:disabled {
 }
 
 .banner-text.medium {
-    padding: 2px 50px;
+    padding: 2px 10%;
 }
 
 .banner-text.large {
@@ -3792,7 +3792,7 @@ a:hover .navbar-setting-button,
         .banner-text.small,
         .banner-text.medium,
         .banner-text.large {
-            padding: 0;
+            padding: 10%;
         }
 
         /*-----------------------------------------------*/

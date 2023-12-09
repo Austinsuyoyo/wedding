@@ -558,6 +558,10 @@ a:hover {
 /* ----------------------------------------------*/
 
 #main-slider .slide-image {
+    background-image: url(./images/main.webp);
+    background-position: top center;
+    width: 100%;
+    padding-top: 75%;
     position: relative;
     height: inherit;
     width: 100%;
@@ -565,7 +569,7 @@ a:hover {
     background-position: 50% 50%;
     background-color: #FFF;
     -webkit-transform: translateZ(0);
-
+    aspect-ratio:16/9;
 }
 
 /* ----------------------------------------------*/

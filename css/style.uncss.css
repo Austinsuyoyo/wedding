@@ -558,18 +558,15 @@ a:hover {
 /* ----------------------------------------------*/
 
 #main-slider .slide-image {
-    background-image: url(./images/main.webp);
     background-position: top center;
     width: 100%;
     padding-top: 75%;
     position: relative;
     height: inherit;
-    width: 100%;
     background-size: cover;
-    background-position: 50% 50%;
-    background-color: #FFF;
+    background-color: #fff;
     -webkit-transform: translateZ(0);
-    aspect-ratio:16/9;
+    aspect-ratio: 16/9;
 }
 
 /* ----------------------------------------------*/
@@ -1274,7 +1271,7 @@ footer .image-divider.fixed-height {
     font-family: sans-serif;
     letter-spacing: 3px;
     font-size: 14px;
-    margin-bottom: 200px
+    /* margin-bottom: 200px */
 }
 
 /* ----------------------------------------------*/

@@ -1258,18 +1258,14 @@ img.with-border {
 /* ----------------------------------------------*/
 #slide-arrow {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 50px;
-    margin: auto;
-    z-index: 2000;
-    text-align: center;
-    width: 100px;
+    left: 50%;
+    bottom: calc(10vh + 10px);
+    transform: translateX(-50%);
 }
 
 #slide-arrow a {
     color: #FFF;
-    font-size: 16px;
+    font-size: 25px;
 }
 
 /*===============================================*/

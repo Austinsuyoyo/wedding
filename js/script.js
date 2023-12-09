@@ -157,18 +157,6 @@ $(document).ready(function () {
 
 	// 02. FULLSCREEN CLASS
 	//==================================================================================
-	var fullscreen = function () {
-		var fheight = $(window).height();
-		$('.fullscreen').css("height", fheight);
-	}
-
-	//Execute on load
-	fullscreen();
-
-	//Execute on window resize
-	$(window).resize(function () {
-		fullscreen();
-	});
 
 	// 03. HIDDEN ALL ANIMATION CLASS
 	//==================================================================================
@@ -285,24 +273,47 @@ $(document).ready(function () {
 		// 04.5 Waypoint Animate CSS
 		//------------------------------------------------------------------------------
 		if (!device.tablet() && !device.mobile() && !isIE9()) {
-			$(document).ready(function () {
-				// Set up Waypoint to trigger at 90% offset for each .animation element
-				$('.animation').waypoint({
-					handler: function (direction) {
-						if (direction === 'down' && !$(this.element).hasClass('animate__animated')) {
-							const animations = ['bounce', 'fadeIn', 'fadeInLeft', 'fadeInRight', 'fadeInUp'];
+		$(document).ready(function () {
+			// Set up Waypoint to trigger at 90% offset for each .animation element
+			$(".animation").waypoint({
+			handler: function (direction) {
+				if (direction === "down" && !$(this.element).hasClass("animate__animated")) {
+				const animations = ["bounce", "fadeIn", "fadeInLeft", "fadeInRight", "fadeInUp"];
 
-							animations.forEach(animation => {
-								if ($(this.element).hasClass(animation)) {
-									$(this.element).removeClass(`${animation}`).addClass(`animate__animated animate__${animation}`).css({ visibility: 'visible' });
-								}
-							});
-						}
-					},
-					offset: '90%'
-				});
+				// Function to apply animation
+				const applyAnimation = (element, animation) => {
+					return new Promise((resolve) => {
+					element
+						.removeClass(`${animation}`)
+						.addClass(`animate__animated animate__${animation}`)
+						.css({ visibility: "visible" });
+					element.on("animationend", () => {
+						resolve();
+					});
+					});
+				};
+
+				// Sequentially apply animations
+				const applyAnimationsSequentially = async () => {
+					for (const animation of animations) {
+					if ($(this.element).hasClass(animation)) {
+						await applyAnimation($(this.element), animation);
+					}
+					}
+
+					// Additional animations after "You're Invited" animation
+					if ($(this.element).attr("id") === "welcome-text") {
+					// Apply additional animations here
+					await applyAnimation($("#slide-arrow-a"), "fadeIn");
+					}
+				};
+
+				applyAnimationsSequentially();
+				}
+			},
+			offset: "90%",
 			});
-			
+		});
 		}
 
 		// 04.6 Stellar Parallax

@@ -76,7 +76,7 @@
           <div class="slide-title">
             <div class="container" style="padding-top: 50vh">
               <div class="row">
-                <div class="col-md-offset-3 col-md-6 animation animate__delay-05s fadeInUp">
+                <div id="welcome-text" class="col-md-offset-3 col-md-6 animation animate__delay-05s fadeInUp">
                   <div id="invited">You're Invited</div>
                   <div class="banner-text medium light">
                     <h1>我們結婚了!</h1>
@@ -85,13 +85,13 @@
                 </div>
               </div>
               <div class="row">
-                <div id="slide-arrow">
+                <div id="slide-arrow" style="visibility: hidden">
                   <div class="animate__animated animate__bounce animate__slow animate__infinite">
                     <a
                       href="#content"
-                      class="animation fadeIn animate__delay-1s smooth-scroll"
-                      style="visibility: visible"
+                      class="animation animate__delay-1s smooth-scroll"                      
                       aria-label="Down Arrow"
+                      id="slide-arrow-a"
                     >
                       <i class="fa-solid fa-caret-down" style="color: #ffffff"></i>
                     </a>
@@ -291,7 +291,7 @@
           <!-- ROW-2 -->
           <div class="row">
             <div class="col-md-6 col-sm-6 text-center">
-              <div class="event-wrap animate-box">
+              <div class="event-wrap animation fadeInLeft">
                 <h3>結婚宴</h3>
                 <div class="event-row">
                   <div class="event-col">
@@ -316,7 +316,7 @@
               </div>
             </div>
             <div class="col-md-6 col-sm-6 text-center">
-              <div class="event-wrap animate-box">
+              <div class="event-wrap animation fadeInRight">
                 <h3>歸寧宴</h3>
                 <div class="event-row">
                   <div class="event-col">

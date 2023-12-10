@@ -293,12 +293,6 @@ a:hover {
 /* 02.1.4 Bottom Bar 							 */
 /* ----------------------------------------------*/
 
-#nav-bar.bottom-bar.outside {
-    position: absolute;
-    /*background-color:transparent;*/
-    bottom: -145px;
-}
-
 #nav-bar.bottom-bar.stick-it {
     position: fixed;
     height: 145px;
@@ -1548,9 +1542,6 @@ body {
         height: 100px;
     }
 
-    #nav-bar.bottom-bar.outside {
-        bottom: -100px;
-    }
 
     /* ----------------------------------------------*/
     /* 02.1 Width & Color (Nav Bar)			 		 */

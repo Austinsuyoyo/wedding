@@ -404,12 +404,6 @@ img.with-border {
     bottom: 0;
 }
 
-#nav-bar.bottom-bar.outside {
-    position: absolute;
-    /*background-color:transparent;*/
-    bottom: -145px;
-}
-
 #nav-bar.bottom-bar.stick-it {
     position: fixed;
     height: 145px;
@@ -3346,10 +3340,6 @@ a:hover .navbar-setting-button,
 
     #nav-bar.bottom-bar.stick-it {
         height: 100px;
-    }
-
-    #nav-bar.bottom-bar.outside {
-        bottom: -100px;
     }
 
     /* ----------------------------------------------*/

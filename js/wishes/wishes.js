@@ -3,7 +3,7 @@
 
   $.fn.ajax_wishes = function () {
     $.get(
-      "https://script.google.com/macros/s/AKfycbwsTMbaEG_QEWNIq8h1N8i3GYcV5Uietch3wvYqpkPlAxxduJ1vdV7k28NEbRNbym6e/exec",
+      "https://script.google.com/macros/s/AKfycbxcdX-vC4mujuOARG403oUgp1zhVNO27XyOrTnVVyhNmWbeYKOfwfHEIgzteR16XoIJrw/exec",
       function (response) {
         if (response.result != "success") {
           return;
@@ -23,7 +23,6 @@
             return 1;
           }
         };
-
         var wishes = response.data;
         wishes.forEach(function (wish) {
           var wishHtml =
@@ -41,7 +40,7 @@
 
         var slider = tns({
           container: ".wish-slider",
-          items: 3,
+          items: response.data.length,
           nav: false,
           center: true,
           arrowKeys: true,

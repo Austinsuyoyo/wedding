@@ -292,13 +292,17 @@ a:hover {
 
 /* 02.1.4 Bottom Bar 							 */
 /* ----------------------------------------------*/
+#nav-bar.bottom-bar.outside {
+    position: absolute;
+    /*background-color:transparent;*/
+    bottom: -145px;
+}
 
 #nav-bar.bottom-bar.stick-it {
     position: fixed;
     height: 145px;
     width: 100%;
     background-color: #FFF;
-    z-index: 1500;
     top: 0;
     bottom: auto;
     /*-webkit-transform: translateZ(0)*/

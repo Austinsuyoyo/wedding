@@ -398,10 +398,9 @@ img.with-border {
 
 /* 02.1.4 Bottom Bar 							 */
 /* ----------------------------------------------*/
-#nav-bar.bottom-bar.inside {
+#nav-bar.bottom-bar.outside {
     position: absolute;
-    /*background-color:transparent;*/
-    bottom: 0;
+    bottom: -145px
 }
 
 #nav-bar.bottom-bar.stick-it {
@@ -409,7 +408,6 @@ img.with-border {
     height: 145px;
     width: 100%;
     background-color: #FFF;
-    z-index: 1500;
     top: 0;
     bottom: auto;
     /*-webkit-transform: translateZ(0)*/
@@ -951,7 +949,7 @@ img.with-border {
     margin: 0;
     padding: 0;
     position: relative;
-    height:100vh;
+    height: 100vh;
 }
 
 /* ----------------------------------------------*/
@@ -979,6 +977,7 @@ img.with-border {
     -webkit-transform: translateZ(0);
     aspect-ratio: 16/9;
 }
+
 /* ----------------------------------------------*/
 /* 06.4 Main Slider Slide-Video			  		 */
 /* ----------------------------------------------*/
@@ -2984,6 +2983,7 @@ footer .image-divider.fixed-height {
     text-align: left;
     margin: 0;
 }
+
 #taichung-wedding-map,
 #kaohsiung-wedding-map {
     background-size: cover;

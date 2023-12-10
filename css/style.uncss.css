@@ -406,6 +406,9 @@ a:hover {
     padding: 18px;
     color: #666;
     text-decoration: none;
+    width: 120px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 #nav-menu>li a:hover {
@@ -544,7 +547,7 @@ a:hover {
     margin: 0;
     padding: 0;
     position: relative;
-    height:100vh;
+    height: 100vh;
 }
 
 /* ----------------------------------------------*/
@@ -559,7 +562,6 @@ a:hover {
 #main-slider .slide-image {
     background-position: top center;
     width: 100%;
-    padding-top: 75%;
     position: relative;
     height: inherit;
     background-size: cover;
@@ -1384,6 +1386,7 @@ footer .image-divider.fixed-height {
 .event-col {
     text-align: center;
 }
+
 #taichung-wedding-map,
 #kaohsiung-wedding-map {
     /* background: url(/image.webp);

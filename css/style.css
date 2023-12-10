@@ -533,6 +533,9 @@ img.with-border {
     padding: 18px;
     color: #666;
     text-decoration: none;
+    width: 120px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 #nav-menu>li a:hover {
@@ -969,7 +972,6 @@ img.with-border {
 #main-slider .slide-image {
     background-position: top center;
     width: 100%;
-    padding-top: 75%;
     position: relative;
     height: inherit;
     background-size: cover;

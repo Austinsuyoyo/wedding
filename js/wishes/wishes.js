@@ -40,7 +40,6 @@
 
         var slider = tns({
           container: ".wish-slider",
-          items: response.data.length,
           nav: false,
           center: true,
           arrowKeys: true,
@@ -49,6 +48,16 @@
           mouseDrag: true,
           controls: false,
           preventScrollOnTouch: "auto",
+          responsive:{
+            0:{
+              items: response.data.length,
+              fixedWidth: 150,
+              gutter: 100
+            },
+            992:{
+              items: response.data.length,
+            },
+          }
         });
         // need refresh when whises show up
         if (!device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari()) {

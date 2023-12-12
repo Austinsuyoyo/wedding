@@ -1,3 +1,4 @@
+var hasRefreshed = false;
 (function ($) {
   "use strict";
 
@@ -48,20 +49,31 @@
           mouseDrag: true,
           controls: false,
           preventScrollOnTouch: "auto",
-          responsive:{
-            0:{
+          responsive: {
+            0: {
               items: response.data.length,
-              fixedWidth: 150,
-              gutter: 100
+              fixedWidth: 130,
+              gutter: 70,
             },
-            992:{
+            992: {
               items: response.data.length,
             },
-          }
+          },
         });
-        // need refresh when whises show up
         if (!device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari()) {
-          $(window).data("plugin_stellar").refresh();
+          var tryRefresh = function () {
+            try {
+              $(window).data("plugin_stellar").refresh();
+
+              hasRefreshed = true;
+            } catch (error) {
+              console.error("Refresh failed:", error);
+              hasRefreshed = false;
+              setTimeout(tryRefresh, 2000);
+            }
+          };
+          // 首次尝试刷新
+          tryRefresh();
         }
       }
     );

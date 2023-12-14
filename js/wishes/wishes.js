@@ -61,7 +61,6 @@
           },
         });
         var customizedFunction = function (info, eventName) {
-          console.log(info.event.type, info.container.id);
           if (eventName === 'transitionEnd') {
             try {
               if (!device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari())

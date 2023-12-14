@@ -4055,3 +4055,9 @@ a:hover .navbar-setting-button,
         display: block;
     }
 }
+
+@media screen and(max-width: 991px) {
+    #divider-1 {
+        background-position: 33%;
+    }
+}

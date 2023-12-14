@@ -1,4 +1,3 @@
-var hasRefreshed = false;
 (function ($) {
   "use strict";
 
@@ -49,32 +48,30 @@ var hasRefreshed = false;
           mouseDrag: true,
           controls: false,
           preventScrollOnTouch: "auto",
+          autoWidth: true,
           responsive: {
             0: {
               items: response.data.length,
-              fixedWidth: 130,
               gutter: 70,
             },
             992: {
+              gutter: 70,
               items: response.data.length,
             },
           },
         });
-        if (!device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari()) {
-          var tryRefresh = function () {
+        var customizedFunction = function (info, eventName) {
+          console.log(info.event.type, info.container.id);
+          if (eventName === 'transitionEnd') {
             try {
-              $(window).data("plugin_stellar").refresh();
-
-              hasRefreshed = true;
+              if (!device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari())
+                $(window).data("plugin_stellar").refresh();
             } catch (error) {
               console.error("Refresh failed:", error);
-              hasRefreshed = false;
-              setTimeout(tryRefresh, 2000);
             }
-          };
-          // 首次尝试刷新
-          tryRefresh();
-        }
+          }
+        };
+        slider.events.on('transitionEnd', customizedFunction);
       }
     );
   };

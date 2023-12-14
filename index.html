@@ -260,8 +260,9 @@
       <!-- PHOTO DIVIDER -->
       <section id="photo-divider-1">
         <div
-          class="image-divider fixed-height"
-          style="background-image: url(./images/divider-1.webp); height: 600px"
+          class="image-divider fixed-height lazy"
+          style="height: 500px;"
+          data-bg="images/divider-1.webp"
           data-stellar-background-ratio="0.3"
           id="divider-1"
         ></div>
@@ -343,8 +344,9 @@
       <!-- PHOTO DIVIDER -->
       <section id="photo-divider-2">
         <div
-          class="image-divider fixed-height"
-          style="background-image: url(./images/divider-2.webp); height: 500px"
+          class="image-divider fixed-height lazy"
+          style="height: 500px;"
+          data-bg="images/divider-2.webp"
           data-stellar-background-ratio="0.3"
           loading="lazy"
         ></div>
@@ -638,8 +640,8 @@
       <!-- DONT MISS IT -->
       <section id="dont-miss-it">
         <div
-          class="image-divider auto-height"
-          style="background-image: url(./images/divider-3.webp)"
+          class="image-divider auto-height lazy"
+          data-bg="images/divider-3.webp"
           data-stellar-background-ratio="0.3"
           loading="lazy"
         >
@@ -707,8 +709,8 @@
     <!-- FOOTER SECTION -->
     <footer>
       <div
-        class="image-divider fixed-height"
-        style="background-image: url(./images/footer.webp)"
+        class="image-divider fixed-height lazy"
+        data-bg="images/footer.webp"
         data-stellar-background-ratio="0.5"
         loading="lazy"
       >
@@ -777,6 +779,15 @@
     <script src="js/confetti/confetti.browser.min.js"></script>
     <!-- Wishes -->
     <script src="js/wishes/wishes.js"></script>
+    <!-- Lazyload -->
+    <script>
+      // Set the options globally
+      // to make LazyLoad self-initialize
+      window.lazyLoadOptions = {
+        // Your custom settings go here
+      };
+    </script>
+    <script async src="js/lazyload/lazyload.min.js"></script>
     <!-- Custom Core Script -->
     <script type="text/javascript" src="js/script.js"></script>
     <!-- Fix jQuery - Use passive listeners to improve scrolling performance -->

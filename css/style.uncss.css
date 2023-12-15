@@ -394,10 +394,9 @@ a:hover {
 }
 
 @media screen and (max-width: 991px) {
-
-    #nav-menu>li.logo-item,
-    #nav-menu>i {
-        display: none;
+    #nav-menu > li.logo-item,
+    #nav-menu > li.heart-icon {
+      display: none;
     }
 }
 
@@ -1394,7 +1393,7 @@ footer .image-divider.fixed-height {
     background-size: cover;
     position: relative;
     overflow: hidden;
-    padding-top: 76.25%;
+    height: 400px;
     border: unset;
 }
 

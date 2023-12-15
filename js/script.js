@@ -236,39 +236,6 @@ $(document).ready(function () {
         offset: "80%",
       }
     );
-
-    // 04.8 Google Map
-    //------------------------------------------------------------------------------
-    $("#taichung-wedding-map").waypoint(
-      function (direction) {
-        if (direction === "down") {
-          var dataSrc = $(this.element).attr("data-src");
-          var iframeElement = document.createElement("iframe");
-          iframeElement.src = dataSrc;
-          $(this.element).append(iframeElement);
-          // run only once
-          this.destroy();
-        }
-      },
-      {
-        offset: "90%",
-      }
-    );
-    $("#kaohsiung-wedding-map").waypoint(
-      function (direction) {
-        if (direction === "down") {
-          var dataSrc = $(this.element).attr("data-src");
-          var iframeElement = document.createElement("iframe");
-          iframeElement.src = dataSrc;
-          $(this.element).append(iframeElement);
-          // run only once
-          this.destroy();
-        }
-      },
-      {
-        offset: "90%",
-      }
-    );
   }); // END of Pace on Hide
 
   // 05. PRELOADER HEART ANIMATION (IE10 / 11)

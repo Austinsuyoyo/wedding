@@ -8,69 +8,40 @@
         if (response.result != "success") {
           return;
         }
-        var isIE9 = function isIE9() {
-          if (window.navigator.userAgent.indexOf("MSIE 9.0") > 0) {
-            return 1;
-          }
-        };
-        var isIE10 = function isIE10() {
-          if (window.navigator.userAgent.indexOf("MSIE 10.0") > 0) {
-            return 1;
-          }
-        };
-        var isSafari = function isSafari() {
-          if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Mac") != -1) {
-            return 1;
-          }
-        };
+
         var wishes = response.data;
-        wishes.forEach(function (wish) {
+        wishes.slice(0, 3).forEach(function (wish, index) {
+          // 判斷是否是前三個，是的話加上 slide-visible 類
+          var visibilityClass = index < 3 ? 'slide-visible' : '';
+
           var wishHtml =
-            '<div><div class="item">' +
-            '<b class="wish-name">' +
-            wish.name +
-            "</b>" +
-            '<p class="wish-message">' +
-            wish.message +
-            "</p>" +
-            "</div></div>";
+            '<div class="' + visibilityClass + '">' +
+            '<div>' +
+            '<h3 class="mb-0 h6" style="color:#DF1E1E;">' + wish.name + '</h3>' +
+            '<small class="text-muted text-uppercase">' + wish.message + '</small>' +
+            '</div>' +
+            '</div>';
 
           $(".wish-slider").append(wishHtml);
         });
 
-        var slider = tns({
-          container: ".wish-slider",
-          nav: false,
-          center: true,
-          arrowKeys: true,
-          lazyload: true,
-          rewind: true,
+        var slider = swiffyslider.initSlider($(".swiffy-slider")[0], {
+          nav: true,
+          prevNextButtons: true,
+          indicators: true,
           mouseDrag: true,
-          controls: false,
           preventScrollOnTouch: "auto",
-          autoWidth: true,
-          responsive: {
-            0: {
-              items: response.data.length,
-              gutter: 70,
-            },
-            992: {
-              gutter: 70,
-              items: response.data.length,
-            },
-          },
+          autoHeight: false,
+          initialSlide: 0,
+          autoPlay: true,
+          autoPlayInterval: 5000, // Set the autoplay interval in milliseconds
         });
-        var customizedFunction = function (info, eventName) {
-          if (eventName === 'transitionEnd') {
-            try {
-              if (!device.tablet() && !device.mobile() && !isIE9() && !isIE10() && !isSafari())
-                $(window).data("plugin_stellar").refresh();
-            } catch (error) {
-              console.error("Refresh failed:", error);
-            }
-          }
-        };
-        slider.events.on('transitionEnd', customizedFunction);
+
+        // Handle custom indicators
+        $(".slider-indicators li").on("click", function () {
+          var index = $(this).index();
+          slider.goTo(index);
+        });
       }
     );
   };
